@@ -1,44 +1,44 @@
 [
     {
-        "name": "test0",
-        "date": "Thu Mar 18 2021 16: 28: 03 GMT-0500 (GMT-05: 00)",
+        "name": "Algebra 1",
+        "date": "5",
         "topic": "math",
         "poster": "student",
+        "location": "in-person"
+    },
+    {
+        "name": "Biology",
+        "date": "2",
+        "topic": "science",
+        "poster": "platform",
         "location": "online"
     },
     {
-        "name": "test1",
-        "date": "Thu Mar 18 2021 16: 28: 03 GMT-0500 (GMT-05: 00)",
+        "name": "Alegbra 2",
+        "date": "3",
         "topic": "math",
         "poster": "student",
+        "location": "in-person"
+    },
+    {
+        "name": "Macroeconomics",
+        "date": "1",
+        "topic": "economics",
+        "poster": "platform",
         "location": "online"
     },
     {
-        "name": "test2",
-        "date": "Thu Mar 18 2021 16: 28: 03 GMT-0500 (GMT-05: 00)",
-        "topic": "math",
-        "poster": "student",
-        "location": "online"
+        "name": "US History",
+        "date": "4",
+        "topic": "history",
+        "poster": "platform",
+        "location": "in-person"
     },
     {
-        "name": "test3",
-        "date": "Thu Mar 18 2021 16: 28: 03 GMT-0500 (GMT-05: 00)",
-        "topic": "math",
+        "name": "Computer Science",
+        "date": "6",
+        "topic": "computing",
         "poster": "student",
-        "location": "online"
-    },
-    {
-        "name": "test4",
-        "date": "Thu Mar 18 2021 16: 28: 03 GMT-0500 (GMT-05: 00)",
-        "topic": "math",
-        "poster": "student",
-        "location": "online"
-    },
-    {
-        "name": "test5",
-        "date": "Thu Mar 18 2021 16: 28: 03 GMT-0500 (GMT-05: 00)",
-        "topic": "math",
-        "poster": "student",
-        "location": "online"
+        "location": "in-person"
     }
 ]
