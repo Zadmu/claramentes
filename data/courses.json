@@ -1,9 +1,9 @@
 [
     {
         "name": "Algebra 1",
-        "date": "5",
+        "date": "1",
         "topic": "math",
-        "poster": "student",
+        "poster": "platform",
         "location": "in-person"
     },
     {
@@ -14,7 +14,7 @@
         "location": "online"
     },
     {
-        "name": "Alegbra 2",
+        "name": "Algebra 2",
         "date": "3",
         "topic": "math",
         "poster": "student",

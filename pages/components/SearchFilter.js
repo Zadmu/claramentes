@@ -4,9 +4,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
 
-const filterElements = (prop, elements) => {
+const filterElements = (prop, elements, term) => {
     // Add custom filters for filters: Date, Topic, Poster (Student or Platform), Location (In-person or Online)
     // Also ascending or decending
     elements.sort((a, b) => {
@@ -17,10 +16,12 @@ const filterElements = (prop, elements) => {
         }
         return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
     });
+
+    elements = elements.filter((element)=>element.name.toLowerCase().includes(term.toLowerCase()))
     return elements;
 };
 
-const SearchFilter = ({ filters, courses }) => {
+const SearchFilter = ({ filters, courses, term}) => {
     const filterOptions = filters.map((filter, idx) => (
         <MenuItem value={idx}>
             {filter}
@@ -30,14 +31,14 @@ const SearchFilter = ({ filters, courses }) => {
     const [elements, setElementOrder] = useState(courses)
     const [filter, setFilter] = useState(filters[0])
     useEffect(() => {
-        let orderedElements = filterElements(filter, elements)
+        let orderedElements = filterElements(filter, courses, term)
         setElementOrder(orderedElements);
-        console.log(elements)
-    }, [filter]);
+    }, [filter, term]);
 
 
+    console.log("this is the state of elements",elements)
     return (<>
-        <FormControl>
+        <FormControl style={{float: 'left', margin: 10}}>
             <InputLabel>Filter</InputLabel>
             <Select onChange={(e) => (setFilter(filters[e.target.value]))}>
                 {filterOptions}

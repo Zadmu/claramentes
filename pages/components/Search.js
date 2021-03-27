@@ -1,17 +1,16 @@
 import React, {useState} from 'react';
+import SearchBar from "material-ui-search-bar";
 
-const Search = () => {
-    const [term, setTerm] = useState('');
+const Search = ({setTerm, term}) => {
 
     return(
         <div>
             <div className = "ui form">
-                <div className = "field">
+                <div className = "field" style={{float: 'left', margin: 10}}>
                     <label> Enter Search Term </label>
-                    <input
-                        value = {term}
-                        onChange = {e => setTerm(e.target.value)}
-                        className = "input"
+                    <SearchBar
+                        value={term}
+                        onRequestSearch={e => setTerm(e)}
                     />
                 </div>
             </div>
