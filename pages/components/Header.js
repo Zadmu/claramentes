@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -40,6 +40,7 @@ const MainPages = [
 
 const Header = () => {
   const classes = useStyles();
+  const [term, setTerm] = useState('');
   
   return (
     <div className= {classes.root}>
@@ -49,10 +50,10 @@ const Header = () => {
             <DropdownNav pages = {MainPages} title = "Explore"/>
           </div>
           <div>
-            <Search />
+            <Search term = {term} setTerm = {setTerm}/>
           </div>
           <div align = "center">
-            <SearchFilter filters={filters} courses={courses} />
+            <SearchFilter filters={filters} courses={courses} term = {term}/>
           </div>
           <Link href = "http://localhost:3000/">
             <Typography variant="h6" className={classes.title} align = "center">
