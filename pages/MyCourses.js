@@ -1,17 +1,17 @@
 import React from 'react';
 import Header from './components/Header';
 
-const MyClasses = () => {
+const MyCourses = () => {
     return (
         <div>
             <div className = "Header">
                 <Header />
             </div>
             <h1>
-                Welcome to your Classes page
+                Welcome to your Course page
             </h1>
         </div>
     );
 }
 
-export default MyClasses;
+export default MyCourses;

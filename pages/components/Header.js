@@ -28,7 +28,8 @@ const ProfilePages = [
 	{path: "MyProfile", title: "My Profile"},
 	{path: "MyVideos", title: "My Videos"},
 	{path: "FollowingList", title: "My Following List"},
-	{path: "MyClasses", title: "My Classes"}
+  {path: "MyGroups", title: "My Groups"},
+  {path: "MyCourses", title: "My Courses"}
 ]
   
 const MainPages = [
