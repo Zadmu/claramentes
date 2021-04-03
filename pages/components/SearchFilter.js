@@ -38,7 +38,7 @@ const SearchFilter = ({ filters, courses, term}) => {
 
     console.log("this is the state of elements",elements)
     return (<>
-        <FormControl style={{float: 'left', margin: 10}}>
+        <FormControl style={{float: 'left', margin: 10, minWidth: 75}}>
             <InputLabel>Filter</InputLabel>
             <Select onChange={(e) => (setFilter(filters[e.target.value]))}>
                 {filterOptions}
