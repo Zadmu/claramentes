@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
       width: theme.spacing(70),
-      height: theme.spacing("auto"), 
+      height: theme.spacing("auto"),  
     },
   },
 }));
@@ -52,7 +52,9 @@ const GroupCard = () => {
     return (
         <div className={classes.root}>
             <Paper className = "cardForGroup" variant = "outlined" elevation = {3}>
-                <ToDoList/>
+                <div className = "To-Do List">
+                    <ToDoList/>
+                </div>
             </Paper>
         </div>
   );
