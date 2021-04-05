@@ -6,7 +6,7 @@ const Search = ({setTerm, term}) => {
     return(
         <div>
             <div className = "ui form">
-                <div className = "field" style={{float: 'left', margin: 10}}>
+                <div className = "field" style={{float: 'bottom', margin: 10}}>
                     <SearchBar
                         value={term}
                         onRequestSearch={e => setTerm(e)}

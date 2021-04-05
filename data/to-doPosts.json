@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Big Meeting",
+        "text": "We're having a big meeting to discuss our next steps",
+        "helpfulInfo": "Go to syllabus to prepare",
+        "due": "October 2nd, 2021"
+    },
+
+    {
+        "title": "Test",
+        "text": "Physics test soon. Start studying!!!",
+        "helpfulInfo": "I shared some docs with you all to help study",
+        "due": "December 5th, 2021"
+    },
+
+    {
+        "title": "HW #17",
+        "text": "Finish the notes document",
+        "helpfulInfo": "Finish soon, we have a big project coming up",
+        "due": "December 8th, 2021"
+    }
+
+
+]
