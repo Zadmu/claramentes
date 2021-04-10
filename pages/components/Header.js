@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const ProfilePages = [
+  {path: "login", title: "Login"},
 	{path: "MyProfile", title: "My Profile"},
 	{path: "MyVideos", title: "My Videos"},
 	{path: "FollowingList", title: "My Following List"},
