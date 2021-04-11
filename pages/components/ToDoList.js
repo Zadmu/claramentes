@@ -1,6 +1,5 @@
 import { PostAdd } from '@material-ui/icons';
 import React, {useState} from 'react';
-import posts from '../../data/to-doPosts.json';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -33,7 +32,7 @@ const useStyles = makeStyles({
   });
 
 
-const ToDoList = () => {
+const ToDoList = ({posts}) => {
     const [text, setText] = useState('');
     const [title, setTitle] = useState('');
     const [due, setDue] = useState('');
