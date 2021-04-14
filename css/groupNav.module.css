@@ -1,0 +1,23 @@
+.headerLine {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    display: flex;
+}
+.dashboardLink {
+    display: block;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-bottom-width: 2px;
+    color: black;
+}
+.dashboardLink a:hover {
+    display: block;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-bottom-width: 2px;
+    color: red;
+}

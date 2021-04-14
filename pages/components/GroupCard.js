@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ToDoList from './ToDoList';
+import ToDoHeader from './ToDoHeader';
+import posts from '../../data/to-doPosts.json';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -10,14 +12,20 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(70),
-      height: theme.spacing("auto"),  
+      width: theme.spacing(87),
+      //height: theme.spacing("auto"),
+      position: 'absolute',
+      top: 180,
+      right: 220,
+      
+
     },
   },
 }));
 
 const GroupCard = () => {
     const [state, setState] = useState('To-Do List');
+    const [filteredList, setFilteredList] = useState(posts);
     const classes = useStyles();
 
     /*const renderCard = () => {
@@ -38,7 +46,12 @@ const GroupCard = () => {
         else if(state.equals('To-Do List')){
             return(
                 <div>
-                    <ToDoList />
+                    <div className = "Assignments filter">
+                        <ToDoFilter/>
+                    </div>
+                    <div className = "To-Do List">
+                        <ToDoList/>
+                    </div>
                 </div>
             );
         }
@@ -52,12 +65,17 @@ const GroupCard = () => {
     return (
         <div className={classes.root}>
             <Paper className = "cardForGroup" variant = "outlined" elevation = {3}>
-                <div className = "To-Do List">
-                    <ToDoList/>
+                <div>
+                    <div className = "Assignments Header">
+                        <ToDoHeader setFilteredPosts = {setFilteredList}/>
+                    </div>
+                    <div className = "To-Do List">
+                        <ToDoList posts = {filteredList}/>
+                    </div>
                 </div>
             </Paper>
         </div>
   );
 }
 
-export default GroupCard
+export default GroupCard;
