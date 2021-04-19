@@ -1,6 +1,7 @@
 import  loginStyles  from '../css/login.module.css';
 import { useUser } from '@auth0/nextjs-auth0';
 import { useRouter } from 'next/router';
+import SignUp from './components/SignUp';
 
 import React from 'react';
 
