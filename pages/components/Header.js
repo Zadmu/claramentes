@@ -29,7 +29,7 @@ const ProfilePages = [
 	{path: "MyProfile", title: "My Profile"},
 	{path: "MyVideos", title: "My Videos"},
 	{path: "FollowingList", title: "My Following List"},
-  {path: "MyGroups", title: "My Groups"},
+  {path: "group/groupid", title: "My Groups"},
   {path: "MyCourses", title: "My Courses"}
 ]
   
@@ -57,7 +57,7 @@ const Header = () => {
           <div align = "center">
             <SearchFilter filters={filters} courses={courses} term = {term}/>
           </div>
-          <Link href = "http://localhost:3000/">
+          <Link href = "http://localhost:3000/home">
             <Typography variant="h6" className={classes.title} align = "center">
               Claramentes
             </Typography>

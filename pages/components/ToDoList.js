@@ -37,7 +37,6 @@ const ToDoList = ({posts}) => {
     const [title, setTitle] = useState('');
     const [due, setDue] = useState('');
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
     const [expanded, setExpanded] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
     

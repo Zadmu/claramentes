@@ -1,7 +1,7 @@
 //this is a temporary name -- rename to [id] once connected to db
 import Header from '../components/Header';
 import GroupInfo from '../components/GroupInfo';
-import ToDoList from '../components/ToDoList';
+import GroupCard from '../components/GroupCard';
 import Comments from '../components/Comments';
 import Navigator from '../components/Navigator';
 
@@ -12,16 +12,12 @@ export default function GroupPage () {
     return(
         <div>
             <Header/>
-            <div>
+            <div align ="center">
                 <button onClick={() => setActiveComponent('info')}> Group Info </button>
                 <button onClick={() => setActiveComponent('comments')}> Discussion </button>
                 <button onClick={() => setActiveComponent('todo')}> To Do </button>
             </div>
-            <Navigator active={activeComponent}>
-                <Comments name="comments"/>
-                <ToDoList name="todo"/>
-                <GroupInfo name="info"/>
-            </Navigator>
+            <GroupCard activeComponent = {activeComponent}/>
         </div>
     )
 }
