@@ -5,6 +5,9 @@ import RecommendedCourses from './components/RecommendedCourses';
 import { DASHBOARD_GET_USER } from '../utils/api-defs';
 import { useRouter } from 'next/router';
 
+import Comments from './components/Comments'
+import comments from './../data/comments.json'
+
 
 
 //add cookies (to save credentials somewhere)
@@ -34,6 +37,9 @@ export default function Home({email, name, userData}) {
     <div>
       <div>
         <Header />
+      </div>
+      <div>
+        <Comments imgLink="" name="Peter Last" comments={comments}/>
       </div>
       <div className="carousel">
         <TopicCarousel/>
