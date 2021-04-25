@@ -14,7 +14,7 @@ export default function Login() {
     console.log(user);   
     console.log(user.email);
     console.log(user.name);
-    router.push({pathname:"/home", query: {email: user.email, name:user.name}}, as);
+    router.push({pathname:"/home",  query: {email: user.email, name:user.name}}, as);
   }
   return(
     <section className={loginStyles.container}>

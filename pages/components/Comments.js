@@ -9,7 +9,9 @@ const Comments = (imgLink, name, comments) => {
     const [comment, setComment] = useState("");
 
     const addComment = () => {
-        //post request? send comment
+        // post on the comments model -> object id
+        // put on group model <- object id
+        // get on group model
     };
 
     return (

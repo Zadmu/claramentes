@@ -1,10 +1,11 @@
-import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TopicCarousel from './components/TopicCarousel';
 import Header from './components/Header';
 import RecommendedCourses from './components/RecommendedCourses';
 import { DASHBOARD_GET_USER } from '../utils/api-defs';
 import { useRouter } from 'next/router';
+
+
 
 //add cookies (to save credentials somewhere)
 export default function Home({email, name, userData}) {
@@ -13,11 +14,22 @@ export default function Home({email, name, userData}) {
   const router = useRouter();
   const as = "/signup";
 
-  console.log(userData);
 
-  if (!userData){
-    router.push({pathname:"/signup", query: {email: email, name:name, userData}}, as);
-  }
+  console.log(userData);
+  console.log(email, name)
+
+  useEffect(() => {
+    // Dons't run
+    if(!email && !name){
+      router.push({pathname: "/"})
+    }
+  
+    if (!userData){
+      router.push({pathname:"/signup", query: {email: email, name:name, userData}}, as);
+    }
+
+  },[]);
+
   return (
     <div>
       <div>
