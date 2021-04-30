@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 const Comments = ({imgLink, name, comments}) => {
+    comments = [];
     const [renderedComments, setRenderedComments] = useState(comments.map((comment)=>Comment(comment.imgLink, comment.name, comment.date, comment.comment, comment.likes)))
     const [comment, setComment] = useState("");
 
