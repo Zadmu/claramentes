@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Group = new Schema({
+    type: "group",
     id: String,
     name: String,
     discription: String,

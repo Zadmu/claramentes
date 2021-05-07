@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const connectDB = require('./db');
 const bodyParser = require('body-parser');
 const dashboard = require('./routes/api/dashboard');
+const course = require('./routes/api/course');
 
 const app = express();
 const port = 5000;
@@ -25,5 +26,6 @@ app.use(helmet());
 connectDB();
 
 app.use('/api/v1/dashboard', dashboard);
+app.use('/api/v1/course', course);
 
 app.listen(port, () => console.log(`API Server listening on port ${port}`));

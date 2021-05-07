@@ -39,7 +39,7 @@ export default function Home({email, name, userData}) {
         <Header />
       </div>
       <div>
-        <Comments imgLink="" name="Peter Last" comments={comments}/>
+        <Comments imgLink="" name="Peter Last" comments={comments} page_id="6094ba969bd7b91cb40b144d" type="course"/>
       </div>
       <div className="carousel">
         <TopicCarousel/>
