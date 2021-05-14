@@ -1,0 +1,33 @@
+.dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid #c4c4c4;
+    background: white;
+    display: inline-block;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .dot-active {
+    background: #c4c4c4;
+    border-color: white;
+  }
+  
+  .leftBtn,
+  .rightBtn {
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0%;
+    font-size: 5rem;
+    font-weight: bold;
+    position: absolute;
+    padding: 0px 5px;
+    cursor: pointer;
+  }
+  .leftBtn {
+    left: 10%;
+  }
+  .rightBtn {
+    right: 10%;
+  }
