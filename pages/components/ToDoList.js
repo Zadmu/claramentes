@@ -15,7 +15,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 250,
+      maxWidth: 400,
       margin: 20,
     },
     bullet: {

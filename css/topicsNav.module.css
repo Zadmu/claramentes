@@ -1,0 +1,80 @@
+.topicsText{
+    position: absolute;
+    height: 43px;
+    top: 761px;
+    
+    /* Title */
+    
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    
+    /* Martinique */
+    
+    color: #323855;
+}
+
+.topicsBox {
+    height: 59px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #F4EED9;
+    border-radius: 10px;
+}
+
+
+.selectedBox{
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 59px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #F4EED9;
+}
+
+.extendNavBox {
+    position: absolute;
+    width: 100%;
+    height: 47px;
+    left: 0px;
+    top: 941px;
+
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.firstRow{
+    position: absolute;
+    left: 125px;
+    top: 752px;
+    display: flex;
+    flex-direction: row;
+}
+
+.secondRow {
+    position: absolute;
+    left: 125px;
+    top: 852px;
+    display: flex;
+    flex-direction: row;
+}
+
+.thirdRow {
+    position: absolute;
+    left: 125px;
+    top: 955px;
+    display: flex;
+    flex-direction: row;
+}
+
+.arrow {
+    border: solid #F4EED9;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(-135deg);
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    margin-left: 50%;
+    position: relative;
+}

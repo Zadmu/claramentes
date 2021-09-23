@@ -1,0 +1,16 @@
+.page {
+    position: relative;
+    height: 2200px;
+    overflow-x: scroll;
+
+    /* dark grey */
+
+    background: #242424;
+}
+
+.picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 660px;
+}
