@@ -20,6 +20,7 @@ const TopicsRow = ({setTopicRow, css, currentRenderedRow, setSelectedTopics, sel
                         onClick = {clickSelectTopic => {
                             setCurrentSelectedTopic(topic.row - 1)
                             setSelectedTopics([...selectedTopics.slice(0, topic.row-1), topic, ...selectedTopics.slice(topic.row)])
+                            setTopicRow(selectedTopics[topic.row-1].row)
                         }}
                         className = {topicsCSS.topicsBox}
                     >
