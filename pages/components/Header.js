@@ -35,7 +35,7 @@ const ProfilePages = [
 const MainPages = [
   {path: "BrowseVideos", title: "Browse Videos"},
   {path: "LocalOpportunities", title: "Local Opportunities"},
-  {path: "topics/topicsid", title: "Browse Topics"}
+  {path: "topicsPage", title: "Browse Topics"}
   //when backend gets added, change [id] to STEM
 ]
 

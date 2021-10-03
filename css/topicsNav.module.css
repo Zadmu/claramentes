@@ -33,38 +33,72 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #F4EED9;
 }
 
+.firstRowPosition{
+    top: 752px;
+}
+
+.secondRowPosition{
+    top: 852px;
+}
+
+.thirdRowPosition{
+    top: 955px;
+}
+
+.fourthRowPosition{
+    top: 752px;
+}
+
+.row{
+    position: absolute;
+    left: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
 .extendNavBox {
     position: absolute;
     width: 100%;
     height: 47px;
     left: 0px;
-    top: 941px;
 
     background: rgba(0, 0, 0, 0.2);
 }
 
-.firstRow{
-    position: absolute;
-    left: 125px;
-    top: 752px;
-    display: flex;
-    flex-direction: row;
-}
-
-.secondRow {
-    position: absolute;
-    left: 125px;
+.bigTopicBoxOneRow {
     top: 852px;
-    display: flex;
-    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 1228px;
+    left: 0px;
+
+    /* Martinique */
+
+    background: #323855;
 }
 
-.thirdRow {
-    position: absolute;
-    left: 125px;
+.bigTopicBoxTwoRow {
     top: 955px;
-    display: flex;
-    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 1228px;
+    left: 0px;
+
+    /* Martinique */
+
+    background: #323855;
+}
+
+.bigTopicBoxThreeRow {
+    top: 1058px;
+    position: absolute;
+    width: 100%;
+    height: 1228px;
+    left: 0px;
+
+    /* Martinique */
+
+    background: #323855;
 }
 
 .arrow {
@@ -77,4 +111,50 @@
     height: 30px;
     margin-left: 50%;
     position: relative;
+}
+
+.topicName {
+    height: 77px;
+
+    /* Big Title */
+
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+
+    /* identical to box height */
+
+
+    /* Alabaster */
+
+    color: #F4EED9;
+}
+
+.descriptionBox {
+    width: 100%;
+    height: 171px;
+    left: 0px;
+    margin-top: 200px;
+
+    /* Spring wood */
+
+    background: #F4EED9;
+}
+
+.descriptionText {
+    width: 866px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px;
+
+    /* Body */
+
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
 }

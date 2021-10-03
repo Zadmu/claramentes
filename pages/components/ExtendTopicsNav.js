@@ -1,25 +1,22 @@
 import React from 'react';
 import topicsCSS from '../../css/topicsNav.module.css';
 
-const ExtendTopicsNav = ({setsTopicRow, topicRow, selectedTopicRow}) => {
-    const rowModulator = () => {
+const ExtendTopicsNav = ({hasChildren, setTopicRow, topicRow, selectedTopicRow}) => {
+    function rowModulator() {
         var row = topicRow;
-        if(row != 3 && row != selectedTopicRow){
-            console.log("adds row");
-            row--;
-        } else {
-            console.log("subtracts row");
+        if(row != 3 && row == selectedTopicRow && hasChildren){
             row++;
+        } else if(row >= 2 && row != selectedTopicRow){
+            row--;
         }
         return row;
     }
 
-
     return (
         <div
-            onClick = {clickExpand => {
-                setsTopicRow(rowModulator())
-            }}
+            onClick = {(() => {
+                setTopicRow(rowModulator())
+            })}
             className = {topicsCSS.extendNavBox}
         >
             <i className = {topicsCSS.arrow}></i>

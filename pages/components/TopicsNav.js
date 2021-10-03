@@ -1,74 +1,57 @@
 import React, {useState} from 'react';
 import topicsCSS from '../../css/topicsNav.module.css';
+import TopicsRow from './TopicsRow';
+import ExtendTopicsNav from './ExtendTopicsNav';
 
-const TopicsNav = ({topicsList, setSelectedTopic, selectedTopic, topicsRow}) => {
-    console.log("enters topicsnav");
-    const renderTopicsRows = () => {
-        console.log("enters renderTopicRow");
-        for(var currentRenderedRow = 1; currentRenderedRow <= topicsRow; currentRenderedRow++){
-            const renderTopics = topicsList.map((topic, index) => {
-                if(topic.row == currentRenderedRow){
-                    if(topic != selectedTopic){
-                        return(
-                            <div
-                                key = {topic.name}
-                                onClick = {clickSelectTopic => {
-                                    setSelectedTopic(topic)
-                                }}
-                                className = {topicsCSS.topicsBox}
-                            >
-                                <h1 className = {topicsCSS.text}>{topic.name}</h1>
-                            </div>
-                        );
-                    } else {
-                        return(
-                            <div
-                                key = {topic.name}
-                                className = {topicsCSS.selectedBox}
-                            >
-                                <h1 className = {topicsCSS.text}>{topic.name}</h1>
-                            </div>
-                        );
-                    }
-                }
-                else {
-                    return;
-                }
+    const TopicsNav = ({setTopicRow, topicsList, setSelectedTopics, selectedTopics, topicRow, currentSelectedTopic, setCurrentSelectedTopic}) => {
 
-            });
-            if(currentRenderedRow == 1){
-                console.log("enters 1st if statement");
-                return (
-                    <div className = {topicsCSS.firstRow}>
-                        {renderTopics}
+        if(topicRow == 3){
+            return (
+                <div>
+                    <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.firstRowPosition}`} currentRenderedRow = {1} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
+                    <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.secondRowPosition}`} currentRenderedRow = {2} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
+                    <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.thirdRowPosition}`} currentRenderedRow = {3} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
+                    <div className = {topicsCSS.bigTopicBoxThreeRow}>
+                        <ExtendTopicsNav hasChildren = {selectedTopics[currentSelectedTopic].hasChildren} setTopicRow = {setTopicRow} topicRow = {topicRow} selectedTopicRow = {selectedTopics[currentSelectedTopic].row}/>
+                        <h1 className = {topicsCSS.topicName}>{selectedTopics[currentSelectedTopic].name}</h1>
+                        <div className = {topicsCSS.descriptionBox}>
+                            <h2 className = {topicsCSS.descriptionText}>{selectedTopics[currentSelectedTopic].Description}</h2>
+                        </div>
                     </div>
-                );
-            }
-            if(currentRenderedRow == 2){
-                console.log("enters 2nd if statement");
-                return (
-                    <div className = {topicsCSS.secondRow}>
-                        {renderTopics}
-                    </div>
-                );
-            }
-            if(currentRenderedRow == 3){
-                console.log("enters 3rd if statement");
-                return (
-                    <div className = {topicsCSS.thirdRow}>
-                        {renderTopics}
-                    </div>
-                );
-            }
-    
+                </div>
+            );
         }
-    }
+        else if(topicRow == 2){
+            return (
+                <div>
+                    <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.firstRowPosition}`} currentRenderedRow = {1} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
+                    <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.secondRowPosition}`} currentRenderedRow = {2} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
+                    <div className = {topicsCSS.bigTopicBoxTwoRow}>
+                        <ExtendTopicsNav hasChildren = {selectedTopics[currentSelectedTopic].hasChildren} setTopicRow = {setTopicRow} topicRow = {topicRow} selectedTopicRow = {selectedTopics[currentSelectedTopic].row}/>
+                        <h1 className = {topicsCSS.topicName}>{selectedTopics[currentSelectedTopic].name}</h1>
+                        <div className = {topicsCSS.descriptionBox}>
+                            <h2 className = {topicsCSS.descriptionText}>{selectedTopics[currentSelectedTopic].Description}</h2>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        else{
+            return (
+                <div>
+                    <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.firstRowPosition}`} currentRenderedRow = {1} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
+                    <div className = {topicsCSS.bigTopicBoxOneRow}>
+                        <ExtendTopicsNav hasChildren = {selectedTopics[currentSelectedTopic].hasChildren} setTopicRow = {setTopicRow} topicRow = {topicRow} selectedTopicRow = {selectedTopics[currentSelectedTopic].row}/>
+                        <h1 className = {topicsCSS.topicName}>{selectedTopics[currentSelectedTopic].name}</h1>    
+                        <div className = {topicsCSS.descriptionBox}>
+                            <h2 className = {topicsCSS.descriptionText}>{selectedTopics[currentSelectedTopic].Description}</h2>
+                        </div>        
+                    </div>
+                </div>
+            );
+        }
 
-    return (
-        <div>
-            {renderTopicsRows()}
-        </div>
-    );
+    
 }
 
 export default TopicsNav;
