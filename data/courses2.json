@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Quantum Physics and Time Travel",
+        "admins": "Smith Smith",
+        "type": "inside",
+        "lessons": [],
+        "description": "",
+        "comments": [],
+        "picture": "https://cdn.mos.cms.futurecdn.net/n6LzftRUbAhUMCSWmi2Sji.jpg",
+        "qualification": "PhD"
+    },
+
+    {
+        "name": "Intro to Biomedical Engineering",
+        "admins": "Kristen Stewart",
+        "type": "inside",
+        "lessons": [],
+        "description": "",
+        "comments": [],
+        "picture": "https://res.cloudinary.com/grand-canyon-university/image/fetch/w_750,h_564,c_fill,g_faces/https://www.gcu.edu/sites/default/files/media/GettyImages-1193074238.jpg",
+        "qualification": "PhD"
+    },
+
+    {
+        "name": "Intro to Python",
+        "admins": "Smith Smith",
+        "type": "inside",
+        "lessons": [],
+        "description": "",
+        "comments": [],
+        "picture": "https://miro.medium.com/max/1400/0*yRhQ28Nd53cTSCR6",
+        "qualification": "BA"
+    }
+]

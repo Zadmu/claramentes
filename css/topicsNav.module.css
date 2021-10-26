@@ -51,7 +51,7 @@
 
 .row{
     position: absolute;
-    left: 15%;
+    left: 10%;
     display: flex;
     flex-direction: row;
 }
@@ -114,29 +114,37 @@
 }
 
 .topicName {
+    align-content: center;
     height: 77px;
-
-    /* Big Title */
-
     font-family: Inria Serif;
     font-style: normal;
     font-weight: bold;
     font-size: 64px;
     line-height: 77px;
-
-    /* identical to box height */
-
-
-    /* Alabaster */
-
     color: #F4EED9;
+}
+
+.topicNameOneRow {
+    text-align: center;
+    top: 910px;
+    margin-top: 40px;
+}
+.topicNameTwoRow {
+    text-align: center;
+    top: 1013px;
+    margin-top: 40px;
+}
+
+.topicNameThreeRow {
+    top: 1116px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 .descriptionBox {
     width: 100%;
-    height: 171px;
     left: 0px;
-    margin-top: 200px;
+    margin-top: 180;
 
     /* Spring wood */
 
