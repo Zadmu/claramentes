@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Group = new Schema({
-    type: "group",
     id: String,
     name: String,
-    discription: String,
+    description: String,
     comments: Array,
     events: Array,
     user_ids: Array,
-    admins: Array
+    admins: Array,
+    picture: String
 })
 
 module.exports = mongoose.model('Group', Group);

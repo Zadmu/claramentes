@@ -7,9 +7,12 @@ const Course = new Schema({
     admins: Array,
     name: String,
     lessons: Array,
-    discription: String,
+    topics: Array,
+    description: String,
     user_ids: Array,
     comments: Array,
+    picture: String,
+    qualification: String,
 })
 
 module.exports = mongoose.model('Course', Course);
