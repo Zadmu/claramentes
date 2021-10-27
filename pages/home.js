@@ -3,12 +3,14 @@ import Header from './components/Header';
 import RecommendedCourses from './components/RecommendedCourses';
 import { DASHBOARD_GET_USER } from '../utils/api-defs';
 import { useRouter } from 'next/router';
+import styled from "styled-components";
 
 import Comments from './components/Comments'
 import comments from './../data/comments.json'
 
 import TopicCarousel from './components/carousel/TopicCarousel';
 import GroupNavigator from './components/GroupNavigator';
+import { Carousel } from 'react-responsive-carousel';
 
 //fake data
 const images = [
@@ -37,7 +39,7 @@ export default function Home({email, name, userData}) {
   console.log(userData);
   console.log(email, name)
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Dons't run
     if(!email && !name){
       router.push({pathname: "/"})
@@ -47,34 +49,39 @@ export default function Home({email, name, userData}) {
       router.push({pathname:"/signup", query: {email: email, name:name, userData}}, as);
     }
 
-  },[]);
+  },[]);*/ // commented out till backend is working
 
   return (
-    <div>
+    <Background>
       <div>
         <Header />
       </div>
-      <div className="carousel">
+      <CarouselWrapper>
         <TopicCarousel images = {images}/>
-      </div>
-
-      <div className = "groupNav">
-        <GroupNavigator groupsList = {groups}/>
-      </div>
-      <div>
-        <Comments imgLink="" name="Peter Last" comments={comments} page_id="6094ba969bd7b91cb40b144d" type="course"/>
-      </div>
-      <div className="recommendedCourses">
-        <h1>Recommended Courses</h1>
+      </CarouselWrapper>
+      <RecommendedWrapper>
+        <RecommendText>Recommended Courses</RecommendText>
         <RecommendedCourses/>
-      </div>
-    </div>
-    
+      </RecommendedWrapper>
+    </Background>
   );
 }
 
-Home.getInitialProps = async ({query: {email, name}}) => {
-  const res = await fetch(DASHBOARD_GET_USER(email));
-  const userData = await res.json();
-  return {email, name, userData}
-}
+const Background = styled.div`
+  background: #242424;
+`;
+
+const CarouselWrapper = styled.div`
+
+`;
+
+const RecommendedWrapper = styled.div`
+  background: #323855;
+`;
+
+const RecommendText = styled.h1`
+  position: center;
+  left: 39%;
+  padding: 1em;
+  color: #F4EED9;
+`;
