@@ -6,6 +6,7 @@ const connectDB = require('./db');
 const bodyParser = require('body-parser');
 const user = require('./routes/api/user');
 const course = require('./routes/api/course');
+const group = require('./routes/api/group');
 
 const app = express();
 const port = 5000;
@@ -26,6 +27,7 @@ app.use(helmet());
 connectDB();
 
 app.use('/api/v1/user', user);
+app.use('/api/v1/group', group);
 app.use('/api/v1/course', course);
 
 app.listen(port, () => console.log(`API Server listening on port ${port}`));
