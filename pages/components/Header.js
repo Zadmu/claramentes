@@ -26,16 +26,14 @@ const useStyles = makeStyles((theme) => ({
 
 const ProfilePages = [
 	{path: "MyProfile", title: "My Profile"},
-	{path: "MyVideos", title: "My Videos"},
-	{path: "FollowingList", title: "My Following List"},
-  {path: "group/groupid", title: "My Groups"},
-  {path: "MyCourses", title: "My Courses"}
+  {path: "MyCourses", title: "My Courses"},
+  {path: "group/groupid", title: "My Groups"}
 ]
   
 const MainPages = [
   {path: "BrowseVideos", title: "Browse Videos"},
   {path: "LocalOpportunities", title: "Local Opportunities"},
-  {path: "Topics", title: "Topics"}
+  {path: "topicsPage", title: "Explore Topics"}
 ]
 
 

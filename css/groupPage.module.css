@@ -1,0 +1,267 @@
+.pictureContainer{
+    position: relative;
+}
+
+.picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+}
+
+.page {
+    position: relative;
+    height: 2200px;
+    overflow-x: scroll;
+
+    /* dark grey */
+
+    background: #242424;
+}
+
+.button{
+    margin-right: 10%;
+    background: #242424;
+    border-radius: 10px;
+}
+
+.buttonName{
+    /* Title */
+
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    color: #F4EED9;
+}
+
+.buttonRow{
+    display: flex;
+    flex-direction: row;
+    width: 705px;
+    height: 49px;
+    margin-top: 1%;
+    margin-left: 32%;
+}
+
+.descriptionLine{
+    width: 219.5px;
+    border: 1px solid #F4EED9;
+    margin-left: 31%;
+    margin-top: 1.5%;
+}
+
+.agendaLine{
+    width: 185px;
+    border: 1px solid #F4EED9;
+    margin-left: 44%;
+    margin-top: 1.5%;
+}
+
+.discussionLine{
+    width: 204px;
+    border: 1px solid #F4EED9;
+    margin-left: 55%;
+    margin-top: 1.5%;
+}
+
+.descriptionBox{
+    width: 100%;
+    left: 0px;
+    margin-top: 10px;
+    
+}
+
+.descriptionText{
+    width: 1033px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    /* Body */
+
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    /* Alabaster */
+
+    color: #F9F9F7;
+    padding: 20px;
+}
+
+
+.nameBox{
+    width: 349px;
+    background:rgba(0, 0, 0, 0.53);
+    position: absolute;
+    top: 510px;
+    height: 50px;
+    left: 38%;
+}
+
+.name{
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+
+    /* Alabaster */
+
+    color: #F9F9F7;
+    text-align: center;
+}
+
+.agendaBox{
+    display: flex;
+    flex-direction: row;
+    width: 1070px;
+    height: 81px;
+    margin: 0 auto;
+
+    /* Spring wood */
+
+    background: #F4EED9;
+    margin-top: 30px;
+}
+
+.assignmentsTitle{
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 43px;
+
+    /* dark grey */
+
+    color: #242424;
+    margin-left: 25%;
+}
+
+.filterBox{
+    width: 186px;
+    height: 54px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-left: 35px;
+    border-radius: 5px;
+}
+
+.filter{
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    margin-left: 10%;
+    padding: 10px;
+    /* dark grey */
+
+    color: #242424;
+
+}
+
+.addAgendaBox{
+    margin-left: 28%;
+    margin-top: 8px;
+    width: 139px;
+    height: 64px;
+    background: rgba(218, 130, 123, 0.5);
+    border-radius: 50px;
+}
+
+.addAgenda{
+    position: absolute;
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #242424;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.eventContainer{
+    margin-top: 7%;
+    width: 815px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.eventTitleBox{
+    margin: 0 auto;
+    width: 426px;
+    height: 50px;
+
+    /* Spring wood */
+
+    background: #F4EED9;
+    border-radius: 20px 30px 0px 0px;
+}
+
+.eventTitle{
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #242424;
+    text-align: center;
+}
+
+.eventDescriptionBox{
+    width: 696px;
+    /* Rock blue */
+    background: #9EB7C7;
+    border-radius: 10px 10px 0px 10px;
+    min-height: 150px;
+}
+
+.eventDescription{
+    width: 548px;
+    text-align: center;
+
+    /* Body */
+
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    /* dark grey */
+
+    color: #242424;
+}
+
+.eventDateBox{
+    width: 262px;
+    height: 41px;
+    /* Twine */
+    background: #C29C71;
+    border-radius: 0px 20px 20px 20px;
+    margin-left: 60%;
+}
+
+.eventDate{
+    padding-top: 7px;
+    margin-left: 10px;
+    width: 220px;
+    height: 29px;
+
+    /* Body */
+
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #000000;
+}

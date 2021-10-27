@@ -24,7 +24,7 @@ const TopicsRow = ({setTopicRow, css, currentRenderedRow, setSelectedTopics, sel
                         }}
                         className = {topicsCSS.topicsBox}
                     >
-                        <h1 className = {topicsCSS.text}>{topic.name}</h1>
+                        <h1 className = {topicsCSS.topicsText}>{topic.name}</h1>
                     </div>
                 );
             } else {
@@ -33,7 +33,7 @@ const TopicsRow = ({setTopicRow, css, currentRenderedRow, setSelectedTopics, sel
                         key = {topic.name}
                         className = {topicsCSS.selectedBox}
                     >
-                        <h1 className = {topicsCSS.text}>{topic.name}</h1>
+                        <h1 className = {topicsCSS.topicsText}>{topic.name}</h1>
                     </div>
                 );
             }

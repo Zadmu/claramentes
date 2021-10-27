@@ -1,9 +1,7 @@
 .topicsText{
-    position: absolute;
-    height: 43px;
-    top: 761px;
     
     /* Title */
+    padding: 10px;
     
     font-family: Inria Serif;
     font-style: normal;
@@ -13,7 +11,7 @@
     
     /* Martinique */
     
-    color: #323855;
+    color: #242424;
 }
 
 .topicsBox {
