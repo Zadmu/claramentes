@@ -9,7 +9,7 @@ const CourseCard = () => {
             <div key = {i} style={{
                 height: "259px",
                 width: "340px",
-                marginLeft: "50px",
+                marginLeft: "10%",
                 position: "relative"
             }}>
                 <div className = {courseCSS.taughtBy}>

@@ -24,7 +24,9 @@ import courseCSS from '../../css/courseCard.module.css';
                             <h2 className = {topicsCSS.descriptionText}>{selectedTopics[currentSelectedTopic].Description}</h2>
                         </div>
                         <div>
-                            <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
+                            <div>
+                                <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
+                            </div>
                             <CourseCard />
                         </div>
                     </div>
@@ -46,7 +48,9 @@ import courseCSS from '../../css/courseCard.module.css';
                             <h2 className = {topicsCSS.descriptionText}>{selectedTopics[currentSelectedTopic].Description}</h2>
                         </div>
                         <div>
-                            <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
+                            <div>
+                                <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
+                            </div>
                             <CourseCard/>
                         </div>
                     </div>
@@ -67,7 +71,9 @@ import courseCSS from '../../css/courseCard.module.css';
                             <h2 className = {topicsCSS.descriptionText}>{selectedTopics[currentSelectedTopic].Description}</h2>
                         </div>
                         <div>
-                            <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
+                            <div style={{marginTop: "3.5%"}}>
+                                <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
+                            </div>
                             <CourseCard/>
                         </div>        
                     </div>
