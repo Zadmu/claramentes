@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import profileCSS from '../css/profilePage.module.css';
+import Link from 'next/link';
 
 const MyProfile = () => {
     return (
@@ -9,9 +10,11 @@ const MyProfile = () => {
                 <Header />
             </div>
             <div style={{ margin: "auto", background: "#4B6576", width: "90%" }}>
-                <div style={{ margin: "auto" }}>
-                    <h1 className={profileCSS.title}>Profile</h1>
-                </div>
+                <Link href="localhost:3000/group/groupid">
+                    <div style={{ margin: "auto" }}>
+                        <h1 className={profileCSS.title}>Profile</h1>
+                    </div>
+                </Link>
                 <div className={profileCSS.box}>
                     <h2 className={profileCSS.category}>Username:</h2>
                     <h2 className={profileCSS.info}>someone</h2>
