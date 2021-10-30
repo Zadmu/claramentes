@@ -5,6 +5,8 @@ import React from 'react';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import { useRouter } from 'next/router';
+import topics from '../../data/topics.json';
+import { ContactSupportOutlined } from '@material-ui/icons';
 
 const animatedComponents = makeAnimated();
 
@@ -145,14 +147,14 @@ const SignUpForm = props => {
     );
 }
 
-const options = [
-    { value: 'Coding', label: 'Coding' },
-    { value: 'Math', label: 'Math' },
-    { value: 'Engineering', label: 'Engineering' },
-    { value: 'Medicine', label: 'Medicine' },
-    { value: 'Music', label: 'Music' },
-    { value: 'Art', label: 'Art' },
-  ];
+  function findTopicArray(){
+    let topicArray = [{value: topics[0].name, label: topics[0].name}]
+    for(let i = 1; i < topics.length; i++){
+      topicArray = [...topicArray.slice(0, i), {value: `${topics[i].name}`, label: `${topics[i].name}`}];
+    }
+    return topicArray;
+  }
+  const options = findTopicArray();
   
   class MySelect extends React.Component {
     handleChange = value => {

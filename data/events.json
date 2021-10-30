@@ -1,16 +1,16 @@
 [
     {
-        "header": "blah blah blah",
-        "date_created": "10/10/10",
-        "due_date": "10/11/10",
-        "description": "cool event here."
+        "header": "Study for 10/2 test",
+        "date_created": "9/20/2021",
+        "due_date": "9/29/2021",
+        "description": "Hey guys, just wanted to let you know that I'm hosting a study sesh on zoom on 9/29. The zoom code is 29835789 and the password is CHEMSTUDYGROUP99"
     },
 
     {
-        "header": "blah blah blah",
+        "header": "Homework help",
         "date_created": "10/10/10",
         "due_date": "10/11/10",
-        "description": "cool event here."
+        "description": "Hey guys, I'm hosting a meeting for homework help if anyone needs it. I'm doing it on zoom, and the code is 392878, and the password is homeworkHELP"
     },
 
     {

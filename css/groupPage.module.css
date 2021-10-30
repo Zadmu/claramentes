@@ -69,17 +69,14 @@
 }
 
 .descriptionBox{
-    width: 100%;
+    width: 1070px;
     left: 0px;
-    margin-top: 30px;
+    margin: auto;
     
 }
 
 .descriptionText{
-    width: 1070px;
     text-align: center;
-    margin-left:auto;
-    margin-right:auto;
     /* Body */
 
     font-style: normal;

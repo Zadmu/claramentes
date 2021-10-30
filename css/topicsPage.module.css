@@ -1,8 +1,6 @@
 .page {
     position: relative;
-    height: 2200px;
-    overflow-x: scroll;
-
+    height: 2400px;
     /* dark grey */
 
     background: #242424;

@@ -1,6 +1,8 @@
 .row{
     display: flex;
     flex-direction: row;
+    padding-right: 20em;
+    padding-bottom: 5em;
 }
 
 .card{
@@ -52,16 +54,11 @@
 }
 
 .popularCourses{
-    margin-left: 2%;
-
-    /* Title */
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 43px;
-
-    color: #F4EED9;
+    position: center;
+  font-size: 30px;
+  left: 39%;
+  padding: 1em;
+  color: #F4EED9;
 }
 
 .taughtBy{

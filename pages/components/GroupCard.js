@@ -3,14 +3,13 @@ import courseCSS from '../../css/courseCard.module.css';
 import Link from 'next/link';
 
 const GroupCard = ({groups}) => {
-    console.log(groups);
     const renderGroups = groups.map((group, i) => {
         return (
             <div key={i} style={{
                 height: "259px",
                 width: "340px",
                 marginLeft: "auto",
-                position: "relative"
+                position: "relative",
             }}>
                 <div className={courseCSS.taughtBy}>
                     <h3 className={courseCSS.owner}>Leader:<br />{group.admins}</h3>
