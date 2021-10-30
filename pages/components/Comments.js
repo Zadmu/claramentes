@@ -6,9 +6,11 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {POST_COMMENT} from '../../utils/api-defs';
 
-const Comments = ({user_id, imgLink, name, comments, page_id, type}) => {
-    const [renderedComments, setRenderedComments] = useState(comments.map((comment)=>Comment(comment.imgLink, comment.name, comment.date, comment.comment, comment.likes)))
+const Comments = ({user_id, imgLink, name, page_id, type}) => {
+
     const [comment, setComment] = useState("");
+    const comments = useState("");
+    const [renderedComments, setRenderedComments] = useState(comments.map((comment)=>Comment(comment.imgLink, comment.name, comment.date, comment.comment, comment.likes)))
 
     imgLink = "https://thispersondoesnotexist.com/image"
 
@@ -45,19 +47,19 @@ const Comments = ({user_id, imgLink, name, comments, page_id, type}) => {
             redirect: 'follow'
         };
 
-        fetch(POST_COMMENT(page_id, type), requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        // fetch(POST_COMMENT(page_id, type), requestOptions)
+        // .then(response => response.text())
+        // .then(result => console.log(result))
+        // .catch(error => console.log('error', error));
 
-        fetch(POST_COMMENT(page_id, type), {
-            user_id: user_id,
-            imgLink: imgLink,
-            name: name,
-            date: date,
-            comment: comment,
-            likes: 0 
-        });
+        // fetch(POST_COMMENT(page_id, type), {
+        //     user_id: user_id,
+        //     imgLink: imgLink,
+        //     name: name,
+        //     date: date,
+        //     comment: comment,
+        //     likes: 0 
+        // });
 
         setRenderedComments([...renderedComments, Comment(imgLink, name, date, comment, 0)])
     };

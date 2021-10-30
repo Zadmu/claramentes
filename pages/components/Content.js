@@ -35,6 +35,9 @@ const Content = ({ activeComponent, group }) => {
         return (
             <div>
                 <hr className={groupCSS.discussionLine} />
+                <div>
+                    <Comments/>
+                </div>
             </div>
         );
     } else return;
