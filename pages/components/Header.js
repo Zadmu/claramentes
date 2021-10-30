@@ -101,8 +101,8 @@ const RDropDownWrapper = styled.div`
 
 const Image = styled.div`
   position: relative;
-  left: -2%;
-  right: 41.39%;
+  margin-left: auto;
+  margin-right: auto;
   top: 0%;
   bottom: 0%;
   height: 70px;

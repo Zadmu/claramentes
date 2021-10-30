@@ -1,27 +1,46 @@
-import { getAllCourseIds, getPostData } from '../lib/course'
-import Comments from '../components/Comments'
+//this is a temporary name -- rename to [id] once connected to db
+import Header from '../components/Header';
+import Comments from '../components/Comments';
+import groupCSS from '../../css/groupPage.module.css';
+import { useState } from 'react';
+import groups from '../../data/groups.json';
+import Content from '../components/Content';
 
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
-  return {
-    props: {
-      postData
-    }
-  }
-}
+export default function GroupPage() {
+    const [activeComponent, setActiveComponent] = useState("description");
+    const group = groups[0];
 
-export async function getStaticPaths() {
-  const paths = await getAllCourseIds()
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-
-export default function Course(props) {
-  const {id, type, admins, name, lessons, discription, user_ids, comments} = props.postData;
-  return (
-    <Comments user_id="none" imgLink="https://thispersondoesnotexist.com/image" name="John" comments={comments} page_id={id} type={type}/>
-  )
+    return (
+        <div className={groupCSS.page}>
+            <Header />
+            <div className={groupCSS.pictureContainer}>
+                <img src={group.picture} className={groupCSS.picture} />
+                <div className = {groupCSS.nameBox}>
+                    <h1 className = {groupCSS.name}>{group.name}</h1>
+                </div>
+                <hr />
+            </div>
+            <div className={groupCSS.buttonRow}>
+                <div
+                    className={groupCSS.button}
+                    onClick={() => setActiveComponent('description')
+                    }>
+                    <h2 className={groupCSS.buttonName}>Description</h2>
+                </div>
+                <div
+                    className={groupCSS.button}
+                    onClick={() => setActiveComponent('agenda')
+                    }>
+                    <h2 className={groupCSS.buttonName}>Agenda</h2>
+                </div>
+                <div
+                    className={groupCSS.button}
+                    onClick={() => setActiveComponent('discussion')
+                    }>
+                    <h2 className={groupCSS.buttonName}>Discussion</h2>
+                </div>
+            </div>
+            <Content activeComponent={activeComponent} group={group} />
+        </div>
+    )
 }

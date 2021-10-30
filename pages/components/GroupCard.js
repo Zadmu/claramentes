@@ -1,20 +1,21 @@
 import React from 'react';
 import courseCSS from '../../css/courseCard.module.css';
-import groups from '../../data/groups.json'
+import Link from 'next/link';
 
-const GroupCard = () => {
+const GroupCard = ({groups}) => {
+    console.log(groups);
     const renderGroups = groups.map((group, i) => {
-        return(
-            <div key = {i} style={{
+        return (
+            <div key={i} style={{
                 height: "259px",
                 width: "340px",
                 marginLeft: "auto",
                 position: "relative"
             }}>
-                <div className = {courseCSS.taughtBy}>
-                    <h3 className = {courseCSS.owner}>Leader:<br/>{group.admins}</h3>
+                <div className={courseCSS.taughtBy}>
+                    <h3 className={courseCSS.owner}>Leader:<br />{group.admins}</h3>
                 </div>
-                <img src = {group.picture} className = {courseCSS.image}/>
+                <img src={group.picture} className={courseCSS.image} />
                 <div style={{
                     height: "240px",
                     background: "#F4EED9",
@@ -23,7 +24,7 @@ const GroupCard = () => {
                     borderRadius: "20px",
                     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                 }}>
-                    <div style = {{
+                    <div style={{
                         background: "rgba(0, 0, 0, 0.1)",
                         borderRadius: "10px",
                         left: "13.82%",
@@ -32,7 +33,7 @@ const GroupCard = () => {
                         height: "56px",
                         position: "absolute"
                     }}>
-                        <h2 className = {courseCSS.name}>{group.name}</h2>
+                        <h2 className={courseCSS.name}>{group.name}</h2>
                     </div>
                 </div>
             </div>
@@ -40,9 +41,9 @@ const GroupCard = () => {
     })
 
 
-    
-    return(
-        <div className = {courseCSS.row}>
+
+    return (
+        <div className={courseCSS.row}>
             {renderGroups}
         </div>
     );
