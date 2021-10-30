@@ -1,10 +1,9 @@
 import React from 'react';
 import courseCSS from '../../css/courseCard.module.css';
-import courses from '../../data/courses2.json';
+import groups from '../../data/groups.json'
 
-const CourseCard = () => {
-
-    const renderCourses = courses.map((course, i) => {
+const GroupCard = () => {
+    const renderGroups = groups.map((group, i) => {
         return(
             <div key = {i} style={{
                 height: "259px",
@@ -13,12 +12,9 @@ const CourseCard = () => {
                 position: "relative"
             }}>
                 <div className = {courseCSS.taughtBy}>
-                    <h3 className = {courseCSS.owner}>Taught by:<br/>{course.admins}</h3>
+                    <h3 className = {courseCSS.owner}>Leader:<br/>{group.admins}</h3>
                 </div>
-                <div className = {courseCSS.qualificationContainer}>
-                    <h3 className = {courseCSS.qualification}>Qualifications:<br/>{course.qualification}</h3>
-                </div>
-                <img src = {course.picture} className = {courseCSS.image}/>
+                <img src = {group.picture} className = {courseCSS.image}/>
                 <div style={{
                     height: "240px",
                     background: "#F4EED9",
@@ -36,7 +32,7 @@ const CourseCard = () => {
                         height: "56px",
                         position: "absolute"
                     }}>
-                        <h2 className = {courseCSS.name}>{course.name}</h2>
+                        <h2 className = {courseCSS.name}>{group.name}</h2>
                     </div>
                 </div>
             </div>
@@ -47,10 +43,9 @@ const CourseCard = () => {
     
     return(
         <div className = {courseCSS.row}>
-            {renderCourses}
+            {renderGroups}
         </div>
     );
-
 }
 
-export default CourseCard;
+export default GroupCard;

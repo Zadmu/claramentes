@@ -4,7 +4,7 @@ import TopicsRow from './TopicsRow';
 import ExtendTopicsNav from './ExtendTopicsNav';
 import CourseCard from './CourseCard';
 import courseCSS from '../../css/courseCard.module.css';
-
+import GroupCard from './GroupCard';
 
     const TopicsNav = ({setTopicRow, topicsList, setSelectedTopics, selectedTopics, topicRow, currentSelectedTopic, setCurrentSelectedTopic}) => {
 
@@ -17,7 +17,7 @@ import courseCSS from '../../css/courseCard.module.css';
                     <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.thirdRowPosition}`} currentRenderedRow = {3} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
                     <div className = {topicsCSS.bigTopicBoxThreeRow}>
                         <ExtendTopicsNav hasChildren = {selectedTopics[currentSelectedTopic].hasChildren} setTopicRow = {setTopicRow} topicRow = {topicRow} selectedTopicRow = {selectedTopics[currentSelectedTopic].row}/>
-                        <div className = {topicsCSS.topicNameThreeRow}>
+                        <div className = {topicsCSS.topicNameContainer}>
                             <h1 className = {topicsCSS.topicName}>{selectedTopics[currentSelectedTopic].name}</h1>
                         </div>
                         <div className = {topicsCSS.descriptionBox}>
@@ -29,6 +29,12 @@ import courseCSS from '../../css/courseCard.module.css';
                             </div>
                             <CourseCard />
                         </div>
+                        <div>
+                            <div style={{marginTop: "3.5%"}}>
+                                <h2 className = {courseCSS.popularCourses}>Popular Groups:</h2>
+                            </div>
+                            <GroupCard/>
+                        </div> 
                     </div>
                 </div>
             );
@@ -41,7 +47,7 @@ import courseCSS from '../../css/courseCard.module.css';
                     <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.secondRowPosition}`} currentRenderedRow = {2} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
                     <div className = {topicsCSS.bigTopicBoxTwoRow}>
                         <ExtendTopicsNav hasChildren = {selectedTopics[currentSelectedTopic].hasChildren} setTopicRow = {setTopicRow} topicRow = {topicRow} selectedTopicRow = {selectedTopics[currentSelectedTopic].row}/>
-                        <div className = {topicsCSS.topicNameTwoRow}>
+                        <div className = {topicsCSS.topicNameContainer}>
                             <h1 className = {topicsCSS.topicName}>{selectedTopics[currentSelectedTopic].name}</h1>
                         </div>
                         <div className = {topicsCSS.descriptionBox}>
@@ -53,6 +59,12 @@ import courseCSS from '../../css/courseCard.module.css';
                             </div>
                             <CourseCard/>
                         </div>
+                        <div>
+                            <div style={{marginTop: "3.5%"}}>
+                                <h2 className = {courseCSS.popularCourses}>Popular Groups:</h2>
+                            </div>
+                            <GroupCard/>
+                        </div> 
                     </div>
                 </div>
             );
@@ -64,7 +76,7 @@ import courseCSS from '../../css/courseCard.module.css';
                     <TopicsRow setTopicRow = {setTopicRow} css = {`${topicsCSS.row} ${topicsCSS.firstRowPosition}`} currentRenderedRow = {1} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicsList = {topicsList} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
                     <div className = {topicsCSS.bigTopicBoxOneRow}>
                         <ExtendTopicsNav hasChildren = {selectedTopics[currentSelectedTopic].hasChildren} setTopicRow = {setTopicRow} topicRow = {topicRow} selectedTopicRow = {selectedTopics[currentSelectedTopic].row}/>
-                        <div className = {topicsCSS.topicNameOneRow}>
+                        <div className = {topicsCSS.topicNameContainer}>
                             <h1 className = {topicsCSS.topicName}>{selectedTopics[currentSelectedTopic].name}</h1>    
                         </div>
                         <div className = {topicsCSS.descriptionBox}>
@@ -75,7 +87,13 @@ import courseCSS from '../../css/courseCard.module.css';
                                 <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
                             </div>
                             <CourseCard/>
-                        </div>        
+                        </div>
+                        <div>
+                            <div style={{marginTop: "3.5%"}}>
+                                <h2 className = {courseCSS.popularCourses}>Popular Groups:</h2>
+                            </div>
+                            <GroupCard/>
+                        </div>          
                     </div>
                 </div>
             );
