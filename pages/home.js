@@ -12,6 +12,9 @@ import TopicCarousel from './components/carousel/TopicCarousel';
 import GroupNavigator from './components/GroupNavigator';
 import { Carousel } from 'react-responsive-carousel';
 
+import CourseCard from './components/CourseCard';
+import GroupCard from './components/GroupCard';
+
 //fake data
 const images = [
   {name: 'Math', imageUrl: 'https://cdn4.iconfinder.com/data/icons/business-marketing-colors-set-1/91/Business_Marketing_57-512.png'},
@@ -61,7 +64,13 @@ export default function Home({email, name, userData}) {
       </CarouselWrapper>
       <RecommendedWrapper>
         <RecommendText>Recommended Courses</RecommendText>
-        <RecommendedCourses/>
+          <GroupCardCSS>
+            <CourseCard/>
+          </GroupCardCSS>
+        <RecommendText>Recommended Groups</RecommendText>
+          <GroupCardCSS>
+            <GroupCard/>
+          </GroupCardCSS>
       </RecommendedWrapper>
     </Background>
   );
@@ -84,4 +93,9 @@ const RecommendText = styled.h1`
   left: 39%;
   padding: 1em;
   color: #F4EED9;
+`;
+
+const GroupCardCSS = styled.div`
+  padding-right: 20em;
+  padding-bottom: 5em;
 `;
