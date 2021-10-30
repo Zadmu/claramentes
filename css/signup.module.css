@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+}
+
+.margin {
+    background-color: rgb(36, 36, 36);
+    width: 20%;
+    height: 100vh;
+}
+
+.signUpBox {
+    background-color: rgb(244, 238, 217);
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+

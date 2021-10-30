@@ -59,9 +59,10 @@ const Header = () => {
 }
 
 const HeaderBackground = styled.div`
+  box-shadow: 0px 0px 15px 3px gray;
   background: #F4EED9;
   position: relative;
-  height = 100px;
+  height: 80px;
   display:flex; 
   flex-direction: row; 
   justify-content: center; 
@@ -72,6 +73,9 @@ const LDropDownWrapper = styled.div`
   position: absolute;
   padding: .5em;
   left: 2%;
+  height: 50px;
+  width: 150px;
+  text-align: center;
   padding-left: 2em;
   padding-right 2em;
 
@@ -83,6 +87,9 @@ const LDropDownWrapper = styled.div`
 const RDropDownWrapper = styled.div`
   position: absolute;
   right: 2%;
+  height: 50px;
+  width: 150px;
+  text-align: center;
   padding: .5em;
   padding-left: 2em;
   padding-right 2em;
@@ -99,8 +106,8 @@ const Image = styled.div`
   top: 0%;
   bottom: 0%;
   height: 70px;
-  width: 200px;
-  background: url('https://s3-alpha-sig.figma.com/img/a180/ddf8/924cd497199d0d229c3943ea25f7ffa4?Expires=1635120000&Signature=SphY22IthjJYdof~utHs8dasQ7zv-8-Q5CvT1Q8ws0PFYfK7JwRzD8PKEwoaOt1yRC4ESU4RXSzjmnWJgL664oCQxy~wGLkUvjvmZnrHVszP24jANXXMrdWlE1A5Nw4o9IXlL-7e4Yp63lj-xlxXftV6NJPHCTmNBHOee0YW29EteHmTZ80JV1bIBqsVIU1LJdkdl-uTY3YhMh6NPVokIkMMBgbHLGLiRtcXhdSbox93auC2m4Fy~Blo7YspkRLuH84OA9GfGIk03voeXIKuq80xHPCmLj-xgDKo-RE8O7R9MBCIu-rIphgxjBk-Jd3h24WA756IgsscTCz39FMXrQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
+  width: 210px;
+  background: url('https://cdn.discordapp.com/attachments/711984521872146527/903183210807185418/claramentes_logo.PNG');
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
 `;
 

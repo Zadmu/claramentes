@@ -32,7 +32,7 @@ const BottomProgressIndicator = ({ images, currentIndex, setIndex }) => {
       style={{
         position: "absolute",
         bottom: "16px",
-        left: "44%",
+        left: "45%",
       }}
     >
       {dots}

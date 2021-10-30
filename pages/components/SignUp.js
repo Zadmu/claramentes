@@ -1,29 +1,32 @@
-import '../../css/formik.module.css';
+import formikStyles from '../../css/formik.module.css';
 import {withFormik} from 'formik';
 import * as Yup from 'yup';
 import React from 'react';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
+import { useRouter } from 'next/router';
+
 const animatedComponents = makeAnimated();
 
 const formik = withFormik({
     initialValues: {
-      firstName: '',
-      lastName: '',
+      fullName: '',
+      email: '',
       username: ''
     },
     validationSchema: Yup.object({
-      firstName: Yup.string()
-      .max(15, 'Must be 15 characters or less')
-      .required('Field is required'),
-      lastName: Yup.string()
-      .max(20, 'Must be 20 characters or less')
-      .required('Field is required'),
+      fullName: Yup.string()
+      .max(25, '*Must be 25 characters or less')
+      .required('*Required'),
+      email: Yup.string()
+      .max(20, '*Must be 20 characters or less')
+      .email('*Invalid email address')
+      .required('*Required'),
       username: Yup.string()
-      .max(25, 'Must be 25 characters or less')
-      .required('Field is required'),
+      .max(20, '*Must be 20 characters or less')
+      .required('*Required'),
       userTopics: Yup.array()
-      .min(3, 'Pick at least 3 topics of interest')
+      .min(3, '*Pick at least 3 topics of interest')
       .of(
         Yup.object().shape({
           label: Yup.string().required(),
@@ -32,8 +35,8 @@ const formik = withFormik({
       )
     }),
     mapPropsToValues: props => ({
-        firstName: '',
-        lastName: '',
+        fullName: '',
+        email: '',
         username: '',
         userTopics: [],
       }),
@@ -65,66 +68,81 @@ const SignUpForm = props => {
     } = props;
 
     return (
+      <div className={formikStyles.formContainer}>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="firstName"> Enter first name </label>
-      <input 
-        id = "firstName"
-        name = "firstName"
-        type = "text"
-        onChange = {handleChange}
-        onBlur = {handleBlur}
-        value = {values.firstName}
-      />
-      {touched.firstName && errors.firstName ? (
-        <div style={{ color: 'red', marginTop: '.5rem' }}> {errors.firstName} </div>
-      ) : null}
-  
-      <label htmlFor="lastName"> Enter last name </label>
-      <input 
-        id = "lastName"
-        name = "lastName"
-        type = "text"
-        onChange = {handleChange}
-        onBlur = {handleBlur}
-        value = {values.lastName}
-      />
-      {touched.lastName && errors.lastName ? (
-        <div style={{ color: 'red', marginTop: '.5rem' }}> {errors.lastName} </div>
-      ) : null}
+          <div className = {formikStyles.inputGroup}>
+            <label className = {formikStyles.inputLabel} htmlFor="fullName"> Full Name: </label>
+              <input 
+                id = "fullName"
+                name = "fullName"
+                type = "text"
+                onChange = {handleChange}
+                onBlur = {handleBlur}
+                value = {values.fullName}
+                className = {formikStyles.fullNameInput}
+              />
+          </div>
+          {touched.fullName && errors.fullName ? (
+              <div style={{ color: 'red', position: 'absolute', fontSize: '15px', marginLeft: '6.5%'}}> {errors.fullName} </div>
+            ) : null}  
+          
+          <div className = {formikStyles.inputGroup}>
+            <label className = {formikStyles.inputLabel} htmlFor="email"> Email: </label>
+              <input 
+                id = "email"
+                name = "email"
+                type = "text"
+                onChange = {handleChange}
+                onBlur = {handleBlur}
+                value = {values.email}
+                className = {formikStyles.emailInput}
+              />
+          </div>
+          {touched.email && errors.email ? (
+            <div style={{ color: 'red', position: 'absolute', fontSize: '15px', marginLeft: '6.5%'}}> {errors.email} </div>
+          ) : null}
 
-    <label htmlFor="username"> Enter username </label>
-      <input 
-        id = "username"
-        name = "username"
-        type = "text"
-        onChange = {handleChange}
-        onBlur = {handleBlur}
-        value = {values.username}
-      />
-      {touched.username && errors.username ? (
-        <div style={{ color: 'red', marginTop: '.5rem' }}>{errors.username}</div>
-      ) : null}
+          <div className = {formikStyles.inputGroup}>
+            <label className = {formikStyles.inputLabel} htmlFor="username"> Username: </label>
+              <input 
+                id = "username"
+                name = "username"
+                type = "text"
+                onChange = {handleChange}
+                onBlur = {handleBlur}
+                value = {values.username}
+                className = {formikStyles.userNameInput}
+              />
+          </div>
+          {touched.username && errors.username ? (
+            <div style={{ color: 'red', position: 'absolute', fontSize: '15px', marginLeft: '6.5%'}}>{errors.username}</div>
+          ) : null}
 
-          <MySelect
-            value={values.topics}
-            onChange={setFieldValue}
-            onBlur={setFieldTouched}
-            error={errors.topics}
-            touched={touched.topics}
-          />
-          <button
-            type="button"
-            className="outline"
-            onClick={handleReset}
-            disabled={!dirty || isSubmitting}
-          >
-            Reset
-          </button>
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
-        </form>
-      );
+              <MySelect
+                value={values.topics}
+                onChange={setFieldValue}
+                onBlur={setFieldTouched}
+                error={errors.topics}
+                touched={touched.topics}
+              />
+
+              <div style = {{marginTop: '40px'}}>
+                <button
+                  type="button"
+                  className="outline"
+                  onClick={handleReset}
+                  disabled={!dirty || isSubmitting}
+                  className = {formikStyles.resetButton}
+                >
+                  Reset
+                </button>
+                <a type="button" disabled={isSubmitting} className = {formikStyles.submitButton} href = "/home">
+                  Submit
+                </a>
+              </div>
+          </form>
+      </div>
+    );
 }
 
 const options = [
@@ -149,8 +167,8 @@ const options = [
   
     render() {
       return (
-        <div style={{ margin: '1rem 0' }}>
-          <label htmlFor="color">Topics of Interest (select at least 3) </label>
+        <div style = {{marginTop: '30px'}}>
+          <label className = {formikStyles.selectLabel} htmlFor="color">Select 3 topics of interest:</label>
           <Select
             id="color"
             options={options}
@@ -159,6 +177,7 @@ const options = [
             onBlur={this.handleBlur}
             components = {animatedComponents}
             value={this.props.value}
+            className = {formikStyles.topicSelect}
           />
           {!!this.props.error &&
             this.props.touched && (

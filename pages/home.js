@@ -10,7 +10,6 @@ import comments from './../data/comments.json'
 
 import TopicCarousel from './components/carousel/TopicCarousel';
 import GroupNavigator from './components/GroupNavigator';
-import { Carousel } from 'react-responsive-carousel';
 
 //fake data
 const images = [
@@ -57,7 +56,7 @@ export default function Home({email, name, userData}) {
         <Header />
       </div>
       <CarouselWrapper>
-        <TopicCarousel images = {images}/>
+        <TopicCarousel images = {images} />
       </CarouselWrapper>
       <RecommendedWrapper>
         <RecommendText>Recommended Courses</RecommendText>
@@ -77,10 +76,12 @@ const CarouselWrapper = styled.div`
 
 const RecommendedWrapper = styled.div`
   background: #323855;
+  margin-top: 30px;
 `;
 
 const RecommendText = styled.h1`
   position: center;
+  font-size: 30px;
   left: 39%;
   padding: 1em;
   color: #F4EED9;
