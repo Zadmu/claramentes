@@ -1,0 +1,5 @@
+[
+    {"name": "Lesson 0: Intro", "description": "This lesson goes over the curriculum, and the basic mathematical framework for the course."},
+    {"name": "Lesson 1: Some Basic Quantum Mechanics", "description": "This lessons covers the basic history of Quantum Mechanics, and some basic principles."},
+    {"name": "Lesson 2: Schrodinger's Equation", "description": "This lesson covers Schrodinger's equation and the Wave Function."}
+]
