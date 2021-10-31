@@ -17,10 +17,10 @@ import GroupCard from './components/GroupCard';
 
 //fake data
 const images = [
-  { name: 'Math', imageUrl: 'https://cdn4.iconfinder.com/data/icons/business-marketing-colors-set-1/91/Business_Marketing_57-512.png' },
-  { name: 'Science', imageUrl: 'https://static.thenounproject.com/png/62984-200.png' },
-  { name: 'English', imageUrl: 'https://cdn1.iconfinder.com/data/icons/language-studies-thick-outline/33/language-04-512.png' },
-  { name: 'Social Studies', imageUrl: 'https://www.highmeadowschool.org/wp-content/uploads/2016/11/globe-icon.png' }
+  { name: 'Math', imageUrl: 'https://thetechviral.com/wp-content/uploads/2017/09/maths-apps.png', href: '/topics'},
+  { name: 'Science', imageUrl: 'https://cdn-icons-png.flaticon.com/512/562/562147.png', href: '/topics'},
+  { name: 'English', imageUrl: 'https://cdn4.iconfinder.com/data/icons/school-education-14/512/Icon_18-512.png', href: '/topics'},
+  { name: 'Social Studies', imageUrl: 'https://www.highmeadowschool.org/wp-content/uploads/2016/11/globe-icon.png', href: '/topics'}
 ]
 
 const groups = [

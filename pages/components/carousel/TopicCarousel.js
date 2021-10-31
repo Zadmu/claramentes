@@ -56,13 +56,14 @@ const DestinationsCarousel = ({ images }) => {
 
   const imagesList = images.map((image, i) => (
     <div key={i}>
-      <img src={image.imageUrl} style = {{height: "40%", width: "40%", marginTop: "5%", marginBottom: "5%"}}/>
-      <h1 style = {{textAlign: "center"}}>{image.topicName}</h1>
+      
+      <h1 style = {{textAlign: "center", color: "#F4EED9", fontSize: "40px", marginTop: "70px"}}>{image.name}</h1>
+      <img src={image.imageUrl} style = {{height: "35%", width: "35%", marginTop: "3%", marginBottom: "8%"}}/>
     </div>
   ));
 
   return (
-    <div style={{ height: "40%", width: "50%", position: "relative", marginLeft: "23%"}}>
+    <div style={{ height: "40%", width: "50%", position: "relative", marginLeft: "23%", marginBottom: "5%"}}>
       <SliderButton isLeft={true} onClick={prev} />
       <SliderButton isLeft={false} onClick={next} />
 
@@ -74,7 +75,7 @@ const DestinationsCarousel = ({ images }) => {
         showIndicators={false}
         transitionTime={700}
       >
-        {imagesList}
+          {imagesList}
       </Carousel>
       <BottomProgressIndicator
         images={images}
