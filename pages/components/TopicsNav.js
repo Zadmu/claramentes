@@ -111,13 +111,13 @@ import GroupCard from './GroupCard';
                         </div>
                         <div>
                             <div>
-                                <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
+                                <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
                             </div>
                             <CourseCard />
                         </div>
                         <div>
                             <div style={{marginTop: "3.5%"}}>
-                                <h2 className = {courseCSS.popularCourses}>Popular Groups:</h2>
+                                <h2 className = {courseCSS.popularCourses}>Popular Groups</h2>
                             </div>
                             <GroupCard groups = {groups3Chemistry}/>
                         </div> 
@@ -141,13 +141,13 @@ import GroupCard from './GroupCard';
                         </div>
                         <div>
                             <div>
-                                <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
+                                <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
                             </div>
                             <CourseCard/>
                         </div>
                         <div>
                             <div style={{marginTop: "3.5%"}}>
-                                <h2 className = {courseCSS.popularCourses}>Popular Groups:</h2>
+                                <h2 className = {courseCSS.popularCourses}>Popular Groups</h2>
                             </div>
                             <GroupCard groups = {groups2Science}/>
                         </div> 
@@ -170,13 +170,13 @@ import GroupCard from './GroupCard';
                         </div>
                         <div>
                             <div style={{marginTop: "3.5%"}}>
-                                <h2 className = {courseCSS.popularCourses}>Popular Courses:</h2>
+                                <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
                             </div>
                             <CourseCard/>
                         </div>
                         <div>
                             <div style={{marginTop: "3.5%"}}>
-                                <h2 className = {courseCSS.popularCourses}>Popular Groups:</h2>
+                                <h2 className = {courseCSS.popularCourses}>Popular Groups</h2>
                             </div>
                             <GroupCard groups = {groups1STEM}/>
                         </div>          

@@ -1,0 +1,54 @@
+.headerBackground {
+    box-shadow: 0px 0px 15px 3px gray;
+    background: #F4EED9;
+    position: relative;
+    height: 80px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.lDropdownWrapper {
+    position: absolute;
+    padding: .5em;
+    left: 2%;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: #323855;
+    box-shadow: 0px 0px 4px 2px
+        rgba(0, 0, 0, 0.1);
+}
+
+.rDropdownWrapper {
+    position: absolute;
+    right: 2%;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    padding: .5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: #323855;
+    box-shadow: 0px 0px 4px 2px
+        rgba(0, 0, 0, 0.1);
+}
+
+.headerLogo {
+    position: relative;
+    left: -2%;
+    right: 41.39%;
+    top: 0%;
+    bottom: 0%;
+    height: 70px;
+    width: 210px;
+    background: url('https://cdn.discordapp.com/attachments/711984521872146527/903183210807185418/claramentes_logo.PNG');
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+.headerLogo:hover {
+    cursor: pointer;
+}

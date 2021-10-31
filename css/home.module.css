@@ -1,0 +1,21 @@
+.background {
+    background: #242424;
+}
+
+.recommendedWrapper {
+    background: #323855;
+    margin-top: 30px;
+}
+
+.recommendedText {
+    background-color: #F4EED9;
+    font-size: 30px;
+    padding: 0.8em;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.groupCardCSS {
+  padding-right: 20em;
+  padding-bottom: 5em;
+}

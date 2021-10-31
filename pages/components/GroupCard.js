@@ -12,7 +12,7 @@ const GroupCard = ({ groups }) => {
                 position: "relative",
             }}>
                 <Link href="/group/groupid">
-                    <div>
+                    <div className = {courseCSS.card}>
                         <div className={courseCSS.taughtBy}>
                             <h3 className={courseCSS.owner}>Leader:<br />{group.admins}</h3>
                         </div>
@@ -23,16 +23,16 @@ const GroupCard = ({ groups }) => {
                             width: "340px",
                             marginTop: "19px",
                             borderRadius: "20px",
-                            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                         }}>
                             <div style={{
                                 background: "rgba(0, 0, 0, 0.1)",
-                                borderRadius: "10px",
+                                borderRadius: "15px",
                                 left: "13.82%",
-                                top: "74.13%",
+                                bottom: "15px",
                                 width: "246px",
-                                height: "56px",
-                                position: "absolute"
+                                height: "auto",
+                                position: "absolute",
+                                padding: "5px"
                             }}>
                                 <h2 className={courseCSS.name}>{group.name}</h2>
                             </div>

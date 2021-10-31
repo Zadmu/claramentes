@@ -21,7 +21,7 @@ const DropdownNav = ({pages, title}) => {
 		return(
 			<div key = {page.path}>
 				<Link href = {`/${page.path}`}>
-                    <MenuItem onClick={handleClose}>{page.title}</MenuItem>
+                    <MenuItem style = {{color: '#F4EED9', fontFamily: 'Inter', fontSize: '17px'}} onClick={handleClose}>{page.title}</MenuItem>
                 </Link>
 			</div>
 		);
@@ -30,7 +30,7 @@ const DropdownNav = ({pages, title}) => {
 
 	return(
 		<div>
-			<Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+			<Button style = {{color: '#E2D696', fontSize: '15px', fontWeight: 'bold', fontFamily: 'Inter'}} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
 				{title}
 			</Button>
 			<Menu
@@ -39,6 +39,11 @@ const DropdownNav = ({pages, title}) => {
 				keepMounted
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
+				PaperProps = {{
+					style: {
+						background: '#323855'
+					}
+				}}
 			>
 				{renderedOptions}
 			</Menu>

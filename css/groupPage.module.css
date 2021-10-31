@@ -11,7 +11,7 @@
 
 .page {
     position: relative;
-    height: 2200px;
+    height: auto;
     overflow-x: scroll;
 
     /* dark grey */
@@ -72,7 +72,8 @@
     width: 1070px;
     left: 0px;
     margin: auto;
-    
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .descriptionText{

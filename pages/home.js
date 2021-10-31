@@ -4,6 +4,7 @@ import RecommendedCourses from './components/RecommendedCourses';
 import { DASHBOARD_GET_USER } from '../utils/api-defs';
 import { useRouter } from 'next/router';
 import styled from "styled-components";
+import homeStyles from '../css/home.module.css';
 
 import Comments from './components/Comments'
 import comments from './../data/comments.json'
@@ -84,20 +85,20 @@ export default function Home({ email, name, userData }) {
   },[]);*/ // commented out till backend is working
 
   return (
-    <Background>
+    <div className = {homeStyles.background}>
       <div>
         <Header />
       </div>
-      <CarouselWrapper>
+      <div>
         <TopicCarousel images={images} />
-      </CarouselWrapper>
-      <RecommendedWrapper>
-        <RecommendText>Recommended Courses</RecommendText>
+      </div>
+      <div className = {homeStyles.recommendedWrapper}>
+        <div className = {homeStyles.recommendedText}>Recommended Courses</div>
         <CourseCard />
-        <RecommendText>Recommended Groups</RecommendText>
+        <div className = {homeStyles.recommendedText}>Recommended Groups</div>
         <GroupCard groups={groups2} />
-      </RecommendedWrapper>
-    </Background>
+      </div>
+    </div>
   );
 }
 

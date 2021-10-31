@@ -4,6 +4,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import DropdownNav from './DropdownNav';
 import Link from 'next/link';
 import styled from "styled-components";
+import headerStyles from "../../css/header.module.css";
 
 const theme = createMuiTheme({
   palette: {
@@ -25,15 +26,15 @@ const useStyles = makeStyles((theme) => ({
 
 
 const ProfilePages = [
-	{path: "MyProfile", title: "My Profile"},
-  {path: "MyCourses", title: "My Courses"},
+	{path: "myprofile", title: "My Profile"},
+  {path: "mycourses", title: "My Courses"},
   {path: "group/groupid", title: "My Groups"}
 ]
   
 const MainPages = [
-  {path: "BrowseVideos", title: "Browse Videos"},
-  {path: "LocalOpportunities", title: "Local Opportunities"},
-  {path: "topicsPage", title: "Explore Topics"}
+  {path: "topics", title: "Explore Topics"},
+  {path: "groups", title: "Explore Groups"},
+  {path: "videos", title: "Browse Videos"}
 ]
 
 
@@ -43,17 +44,17 @@ const Header = () => {
   
   return (
     <div className= {classes.root}>
-      <HeaderBackground>
-          <LDropDownWrapper>
+      <div className = {headerStyles.headerBackground}>
+          <div className = {headerStyles.lDropdownWrapper}>
             <DropdownNav className = "ExploreText" pages = {MainPages} title = "Explore"/>
-          </LDropDownWrapper>
+          </div>
           <Link href = "http://localhost:3000/home">
-            <Image/>
+            <img className = {headerStyles.headerLogo}/>
           </Link>
-          <RDropDownWrapper>
+          <div className = {headerStyles.rDropdownWrapper}>
             <DropdownNav pages = {ProfilePages} title = "Account"/>
-          </RDropDownWrapper>
-      </HeaderBackground>
+          </div>
+      </div>
     </div>
   );
 }

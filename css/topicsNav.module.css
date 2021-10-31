@@ -38,15 +38,15 @@
 
 
 .firstRowPosition{
-    top: 770px;
+    top: 775px;
 }
 
 .secondRowPosition{
-    top: 870px;
+    top: 865px;
 }
 
 .thirdRowPosition{
-    top: 955px;
+    top: 960px;
 }
 
 .fourthRowPosition{
@@ -63,14 +63,12 @@
 .extendNavBox {
     position: absolute;
     width: 100%;
-    height: 50px;
-    left: 0px;
-
+    height: 65px;
     background: rgba(0, 0, 0, 0.2);
 }
 
 .bigTopicBoxOneRow {
-    top: 852px;
+    top: 870px;
     position: absolute;
     width: 100%;
     height: 1500px;
@@ -111,19 +109,19 @@
     display: inline-block;
     transform: rotate(-135deg);
     padding: 3px;
-    width: 30px;
-    height: 30px;
-    margin-left: 50%;
+    width: 33px;
+    height: 33px;
+    margin-left: 49%;
     position: relative;
-    margin-top: 17px;
+    margin-top: 25px;
 }
 
 .topicName {
     align-content: center;
-    height: 150px;
+    height: 100px;
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 70px;
     line-height: 150px;
     color: #F4EED9;
 }
@@ -134,18 +132,15 @@
 }
 
 .descriptionBox {
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: 5%;
-    border-radius: 10px;
-
     /* Spring wood */
-
     background: #F4EED9;
 }
 
 .descriptionText {
-    width: 866px;
+    width: 55%;
     text-align: center;
     margin-left:auto;
     margin-right:auto;
