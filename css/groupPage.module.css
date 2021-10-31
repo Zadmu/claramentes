@@ -257,3 +257,14 @@
 
     color: #000000;
 }
+
+.lessonTitleBox{
+    margin: 0 auto;
+    width: 426px;
+    height: 80px;
+
+    /* Spring wood */
+
+    background: #F4EED9;
+    border-radius: 20px 30px 0px 0px;
+}

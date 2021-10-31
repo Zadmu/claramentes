@@ -8,7 +8,7 @@ const LessonList = ({posts}) => {
     const renderList = lessons.map((lesson, i) => {
         return(
             <div key = {i} className = {groupCSS.eventContainer}>
-                <div className = {groupCSS.eventTitleBox}>
+                <div className = {groupCSS.lessonTitleBox}>
                     <h1 className = {groupCSS.eventTitle}>{lesson.name}</h1>
                 </div>
                 <div className = {groupCSS.eventDescriptionBox}>
