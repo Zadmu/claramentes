@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Course = new Schema({
-    id: String,
     type: String,
     admins: Array,
     name: String,
@@ -13,6 +12,7 @@ const Course = new Schema({
     comments: Array,
     picture: String,
     qualification: String,
+    instructor: String
 })
 
 module.exports = mongoose.model('Course', Course);
