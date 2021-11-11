@@ -177,7 +177,7 @@ const SignUpForm = props => {
             isMulti={true}
             onChange={this.handleChange}
             onBlur={this.handleBlur}
-            components = {animatedComponents}
+            components = {animatedComponents}       
             value={this.props.value}
             className = {formikStyles.topicSelect}
           />

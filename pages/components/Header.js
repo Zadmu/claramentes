@@ -26,11 +26,16 @@ const useStyles = makeStyles((theme) => ({
 
 
 const ProfilePages = [
+<<<<<<< HEAD
 	{path: "myprofile", title: "My Profile"},
   {path: "mycourses", title: "My Courses"},
+=======
+	{path: "MyProfile", title: "My Profile"},
+  {path: "course/courseid", title: "My Courses"},
+>>>>>>> 40219f8 (stuff?)
   {path: "group/groupid", title: "My Groups"}
 ]
-  
+
 const MainPages = [
   {path: "topics", title: "Explore Topics"},
   {path: "groups", title: "Explore Groups"},

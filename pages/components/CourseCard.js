@@ -13,8 +13,13 @@ const CourseCard = () => {
                 marginLeft: "auto",
                 position: "relative"
             }}>
+<<<<<<< HEAD
                 <Link href="/mycourses">
                     <div className = {courseCSS.card}>
+=======
+                <Link href="/course/courseid">
+                    <div>
+>>>>>>> 40219f8 (stuff?)
                         <div className={courseCSS.taughtBy}>
                             <h3 className={courseCSS.owner}>Teacher:<br />{course.admins}</h3>
                         </div>
