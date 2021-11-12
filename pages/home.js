@@ -6,14 +6,23 @@ import { useRouter } from 'next/router';
 import styled from "styled-components";
 import homeStyles from '../css/home.module.css';
 
-import Comments from './components/Comments'
-import comments from './../data/comments.json'
+import { MATH_COURSES } from '../utils/api-defs';
 
 import TopicCarousel from './components/carousel/TopicCarousel';
 import GroupNavigator from './components/GroupNavigator';
 
 import CourseCard from './components/CourseCard';
 import GroupCard from './components/GroupCard';
+
+export async function getServerSideProps() {
+  const res = await fetch(MATH_COURSES());
+  const courses = await res.json();
+  return {
+    props: {
+      courses
+    }
+  }
+};
 
 //fake data
 const images = [
@@ -62,15 +71,14 @@ const groups2 = [
 
 
 //add cookies (to save credentials somewhere)
-export default function Home({ email, name, userData }) {
+export default function Home({ email, name, userData, courses}) {
   const [term, setTerm] = useState('');
 
   const router = useRouter();
   const as = "/signup";
 
-
   console.log(userData);
-  console.log(email, name)
+  console.log(email, name);
 
   /*useEffect(() => {
     // Dons't run
@@ -94,7 +102,7 @@ export default function Home({ email, name, userData }) {
       </div>
       <div className = {homeStyles.recommendedWrapper}>
         <div className = {homeStyles.recommendedText}>Recommended Courses</div>
-        <CourseCard />
+        <CourseCard courses={courses}/>
         <div className = {homeStyles.recommendedText}>Recommended Groups</div>
         <GroupCard groups={groups2} />
       </div>

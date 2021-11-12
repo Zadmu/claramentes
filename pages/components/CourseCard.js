@@ -1,11 +1,13 @@
 import React from 'react';
 import courseCSS from '../../css/courseCard.module.css';
-import courses from '../../data/courses2.json';
+// import courses from '../../data/courses2.json';
 import Link from 'next/link';
 
-const CourseCard = () => {
+const CourseCard = ({courses}) => {
 
-    const renderCourses = courses.map((course, i) => {
+    const displayThreeCourses = courses.slice(0, 3);
+
+    const renderCourses = displayThreeCourses.map((course, i) => {
         return (
             <div key={i} style={{
                 height: "259px",
@@ -13,15 +15,10 @@ const CourseCard = () => {
                 marginLeft: "auto",
                 position: "relative"
             }}>
-<<<<<<< HEAD
-                <Link href="/mycourses">
+                <Link href="/course/[id]" as={`/course/${course._id}`} key={`${course._id}/listed`}>
                     <div className = {courseCSS.card}>
-=======
-                <Link href="/course/courseid">
-                    <div>
->>>>>>> 40219f8 (stuff?)
                         <div className={courseCSS.taughtBy}>
-                            <h3 className={courseCSS.owner}>Teacher:<br />{course.admins}</h3>
+                            <h3 className={courseCSS.owner}>Teacher:<br />{course.instructor}</h3>
                         </div>
                         <div className={courseCSS.qualificationContainer}>
                             <h3 className={courseCSS.qualification}>Certifications:<br />{course.qualification}</h3>

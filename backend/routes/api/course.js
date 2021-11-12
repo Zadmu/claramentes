@@ -190,7 +190,7 @@ router.get('/lessons/:id', async (req, res) => {
 
 router.get('/topics/STEM', async (req, res) => {
 
-    const courses = await Course.find({topics: { $in: ["math","science","technology"]} }, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: { $in: ["math","science","technology"]} }, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No math courses found'})
@@ -203,7 +203,7 @@ router.get('/topics/STEM', async (req, res) => {
 
 router.get('/topics/humanities', async (req, res) => {
 
-    const courses = await Course.find({topics: { $in: ["humanities","history","english","philosophy","art"]} }, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: { $in: ["humanities","history","english","philosophy","art"]} }, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No humanities courses found'})
@@ -214,7 +214,7 @@ router.get('/topics/humanities', async (req, res) => {
  
  router.get('/topics/languages', async (req, res) => {
      
-    const courses = await Course.find({topics: { $in: ["language","spanish","chinese"]} }, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: { $in: ["language","spanish","chinese"]} }, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No language courses found'})
@@ -225,7 +225,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/socialsciences', async (req, res) => {
      
-    const courses = await Course.find({topics: { $in: ["social science","history","sociology"]} }, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: { $in: ["social science","history","sociology"]} }, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No social science courses found'})
@@ -236,7 +236,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/socialsciences', async (req, res) => {
      
-    const courses = await Course.find({topics: { $in: ["history","sociology"]} }, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: { $in: ["history","sociology"]} }, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No social science courses found'})
@@ -247,7 +247,7 @@ router.get('/topics/humanities', async (req, res) => {
  
  router.get('/topics/tradeskills', async (req, res) => {
 
-    const courses = await Course.find({topics: "trade skills"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "trade skills"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No trade skill courses found'})
@@ -258,7 +258,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/science', async (req, res) => {
 
-    const courses = await Course.find({topics: "science"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "science"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No science courses found'})
@@ -269,7 +269,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/technology', async (req, res) => {
 
-    const courses = await Course.find({topics: "technology"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "technology"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No technology courses found'})
@@ -280,7 +280,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/engineering', async (req, res) => {
 
-    const courses = await Course.find({topics: "engineering"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "engineering"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No engineering courses found'})
@@ -291,7 +291,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/math', async (req, res) => {
 
-    const courses = await Course.find({topics: "math"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "math"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No math courses found'})
@@ -302,7 +302,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/biology', async (req, res) => {
 
-    const courses = await Course.find({topics: "biology"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "biology"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No biology courses found'})
@@ -313,7 +313,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/chemistry', async (req, res) => {
 
-    const courses = await Course.find({topics: "chemistry"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "chemistry"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No chemistry courses found'})
@@ -324,7 +324,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/physics', async (req, res) => {
 
-    const courses = await Course.find({topics: "physics"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "physics"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No physics courses found'})
@@ -335,7 +335,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/art', async (req, res) => {
 
-    const courses = await Course.find({topics: "art"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "art"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No art courses found'})
@@ -346,7 +346,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/acting', async (req, res) => {
 
-    const courses = await Course.find({topics: "acting"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "acting"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No acting courses found'})
@@ -357,7 +357,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/philosophy', async (req, res) => {
 
-    const courses = await Course.find({topics: "philosophy"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "philosophy"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No philosophy courses found'})
@@ -368,7 +368,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/literature', async (req, res) => {
 
-    const courses = await Course.find({topics: "literature"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "literature"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No literature courses found'})
@@ -379,7 +379,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/religion', async (req, res) => {
 
-    const courses = await Course.find({topics: "religion"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "religion"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No religion courses found'})
@@ -390,7 +390,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/mandarin', async (req, res) => {
 
-    const courses = await Course.find({topics: "mandarin"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "mandarin"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No mandarin courses found'})
@@ -401,7 +401,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/russian', async (req, res) => {
 
-    const courses = await Course.find({topics: "russian"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "russian"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No russian courses found'})
@@ -412,7 +412,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/spanish', async (req, res) => {
 
-    const courses = await Course.find({topics: "spanish"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "spanish"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No spanish courses found'})
@@ -423,7 +423,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/hebrew', async (req, res) => {
 
-    const courses = await Course.find({topics: "hebrew"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "hebrew"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No hebrew courses found'})
@@ -434,7 +434,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/arabic', async (req, res) => {
 
-    const courses = await Course.find({topics: "arabic"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "arabic"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No arabic courses found'})
@@ -445,7 +445,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/latin', async (req, res) => {
 
-    const courses = await Course.find({topics: "latin"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "latin"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No latin courses found'})
@@ -456,7 +456,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/geography', async (req, res) => {
 
-    const courses = await Course.find({topics: "geography"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "geography"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No geopgraphy courses found'})
@@ -467,7 +467,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/psychology', async (req, res) => {
 
-    const courses = await Course.find({topics: "psychology"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "psychology"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No psychology courses found'})
@@ -478,7 +478,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/economics', async (req, res) => {
 
-    const courses = await Course.find({topics: "economics"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "economics"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No economics courses found'})
@@ -489,7 +489,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/politicalscience', async (req, res) => {
 
-    const courses = await Course.find({topics: "political science"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "political science"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No political science courses found'})
@@ -500,7 +500,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/sociology', async (req, res) => {
 
-    const courses = await Course.find({topics: "sociology"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "sociology"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No sociology courses found'})
@@ -511,7 +511,7 @@ router.get('/topics/humanities', async (req, res) => {
 
  router.get('/topics/law', async (req, res) => {
 
-    const courses = await Course.find({topics: "law"}, {_id: 1, name: 1, qualification:1, instructor:1});
+    const courses = await Course.find({topics: "law"}, {_id: 1, name: 1, qualification:1, instructor:1, picture:1});
  
     if (courses.length == 0){
         return res.status(404).send({message: 'No law courses found'})

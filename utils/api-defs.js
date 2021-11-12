@@ -34,3 +34,6 @@ export const GROUP_ADD_COMMENT = (id) => `${ORIGIN}/api/v1/group/add/comment/${i
 export const GET_GROUP_COMMENTS = (id) => `${ORIGIN}/api/v1/group/comments/${id}`;
 export const GROUP_ADD_EVENT = (id) => `${ORIGIN}/api/v1/group/add/event/${id}`;
 export const GET_GROUP_EVENTS = (id) => `${ORIGIN}/api/v1/group/events/${id}`;
+
+//topics
+export const MATH_COURSES = () => `${ORIGIN}/api/v1/course/topics/math`;
