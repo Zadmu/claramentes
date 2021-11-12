@@ -17,9 +17,6 @@ const CourseContent = ({ activeComponent, course }) => {
         return (
             <div>
                 <hr className={groupCSS.agendaLine} />
-                <div className={groupCSS.agendaBox}>
-                    <h1 className={groupCSS.assignmentsTitle}>Lessons</h1>
-                </div>
                 <div>
                     <LessonList/>
                 </div>

@@ -15,7 +15,11 @@ const CourseCard = ({courses}) => {
                 marginLeft: "auto",
                 position: "relative"
             }}>
+<<<<<<< HEAD
                 <Link href="/course/[id]" as={`/course/${course._id}`} key={`${course._id}/listed`}>
+=======
+                <Link href="/mycourses">
+>>>>>>> 162dc58 (lessons framework)
                     <div className = {courseCSS.card}>
                         <div className={courseCSS.taughtBy}>
                             <h3 className={courseCSS.owner}>Teacher:<br />{course.instructor}</h3>

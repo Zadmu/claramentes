@@ -3,7 +3,40 @@ import Comments from '../components/Comments';
 import groupCSS from '../../css/groupPage.module.css';
 import { useState } from 'react';
 import courses from '../../data/course(1).json';
-import CourseContent from '../components/CourseContent';
+import LessonList from '../components/LessonList';
+
+
+const CourseContent = ({ activeComponent, course }) => {
+    if (activeComponent === "description") {
+        return (
+            <div>
+                <hr className={groupCSS.descriptionLine} />
+                <div className={groupCSS.descriptionBox}>
+                    <h3 className={groupCSS.descriptionText}>{course.description}</h3>
+                </div>
+            </div>
+        );
+    } else if (activeComponent === "lessons") {
+        return (
+            <div>
+                <hr className={groupCSS.agendaLine} />
+                <div>
+                    <LessonList/>
+                </div>
+            </div>
+        );
+    } else if (activeComponent === "discussion") {
+        return (
+            <div>
+                <hr className={groupCSS.discussionLine} />
+                <div>
+                    <Comments/>
+                </div>
+            </div>
+        );
+    } else return;
+}
+
 
 export default function CoursePage() {
     const [activeComponent, setActiveComponent] = useState("description");

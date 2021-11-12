@@ -1,0 +1,75 @@
+.lessonCard {
+    width: 100%;
+    min-height: 1000px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.lessonContent{
+    width: 85%;
+    height: 93%;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    background: #323855;
+    border-radius: 10px;
+}
+
+.lessonNav {
+    width: 20%;
+    left: 5%;
+    top: 0px;
+    position: absolute;
+    background: #F4EED9;
+    border-radius: 10px;
+}
+
+.lessonsHeader {
+    width: 100%;
+    background: rgba(218, 130, 123, 0.5);
+    top: 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.lessonButtonColumn {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.title {
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+
+    /* dark grey */
+
+    text-align: center;
+}
+
+.darkGrey{
+    color: #242424;
+}
+
+.lightYellow{
+    color: #F4EED9;
+    margin-top: 20px;
+}
+
+.lessonButton {
+    border-radius: 10px;
+    background: rgba(158, 183, 199, 0.5);
+    width: 90%;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lessonButton:hover{
+    box-shadow: 1px 1px 3px rgba(36, 36, 36, 0.5);
+    transform: scale(1.01);
+    cursor: pointer;
+}

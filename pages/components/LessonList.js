@@ -1,27 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import lessons from '../../data/lessons.json';
-import groupCSS from '../../css/groupPage.module.css';
+import courseCSS from '../../css/coursePage.module.css';
 
 
-const LessonList = ({posts}) => {
-
-    const renderList = lessons.map((lesson, i) => {
+const LessonList = () => {
+    const [lesson, setLesson] = useState(lessons[0]);
+    const renderButtons = lessons.map((specificLesson, i) => {
         return(
-            <div key = {i} className = {groupCSS.eventContainer}>
-                <div className = {groupCSS.lessonTitleBox}>
-                    <h1 className = {groupCSS.eventTitle}>{lesson.name}</h1>
-                </div>
-                <div className = {groupCSS.eventDescriptionBox}>
-                    <h3 className = {groupCSS.eventDescription}>{lesson.description}</h3>
-                </div>
+            <div className = {courseCSS.lessonButton} key = {i}  onClick = {clickLesson => {setLesson(specificLesson)}}>
+                <h1 className = {`${courseCSS.title} ${courseCSS.darkGrey}`}>{specificLesson.name}</h1>
             </div>
-
         );
     })
 
     return(
-        <div>
-            {renderList}
+        <div className = {courseCSS.lessonCard}>
+            <div className = {courseCSS.lessonContent}>
+                <h1 className = {`${courseCSS.title} ${courseCSS.lightYellow}`}>{lesson.name}</h1>
+            </div>
+            <div className = {courseCSS.lessonNav}>
+                <div className = {courseCSS.lessonsHeader}>
+                    <h1 className = {`${courseCSS.title} ${courseCSS.darkGrey}`}>Lessons</h1>
+                </div>
+                <div className = {courseCSS.lessonButtonColumn}>
+                    {renderButtons}
+                </div>
+            </div>
         </div>
     );
 
