@@ -3,20 +3,53 @@ import Header from '../components/Header';
 import Comments from '../components/Comments';
 import groupCSS from '../../css/groupPage.module.css';
 import { useState } from 'react';
-import groups from '../../data/groups.json';
-import Content from '../components/Content';
+import courses from '../../data/course(1).json';
+import LessonList from '../components/LessonList';
 
-export default function GroupPage() {
+
+const CourseContent = ({ activeComponent, course }) => {
+    if (activeComponent === "description") {
+        return (
+            <div>
+                <hr className={groupCSS.descriptionLine} />
+                <div className={groupCSS.descriptionBox}>
+                    <h3 className={groupCSS.descriptionText}>{course.description}</h3>
+                </div>
+            </div>
+        );
+    } else if (activeComponent === "lessons") {
+        return (
+            <div>
+                <hr className={groupCSS.agendaLine} />
+                <div>
+                    <LessonList/>
+                </div>
+            </div>
+        );
+    } else if (activeComponent === "discussion") {
+        return (
+            <div>
+                <hr className={groupCSS.discussionLine} />
+                <div>
+                    <Comments/>
+                </div>
+            </div>
+        );
+    } else return;
+}
+
+
+export default function CoursePage() {
     const [activeComponent, setActiveComponent] = useState("description");
-    const group = groups[0];
+    const course = courses[0];
 
     return (
         <div className={groupCSS.page}>
             <Header />
             <div className={groupCSS.pictureContainer}>
-                <img src={group.picture} className={groupCSS.picture} />
+                <img src={course.picture} className={groupCSS.picture} />
                 <div className = {groupCSS.nameBox}>
-                    <h1 className = {groupCSS.name}>{group.name}</h1>
+                    <h1 className = {groupCSS.name}>{course.name}</h1>
                 </div>
                 <hr />
             </div>
@@ -29,9 +62,8 @@ export default function GroupPage() {
                 </div>
                 <div
                     className={groupCSS.button}
-                    onClick={() => setActiveComponent('agenda')
-                    }>
-                    <h2 className={groupCSS.buttonName}>Agenda</h2>
+                    onClick={() => setActiveComponent('lessons')}>
+                    <h2 className={groupCSS.buttonName}>Lessons</h2>
                 </div>
                 <div
                     className={groupCSS.button}
@@ -40,7 +72,7 @@ export default function GroupPage() {
                     <h2 className={groupCSS.buttonName}>Discussion</h2>
                 </div>
             </div>
-            <Content activeComponent={activeComponent} group={group} />
+            <CourseContent activeComponent={activeComponent} course={course} />
         </div>
     )
 }
