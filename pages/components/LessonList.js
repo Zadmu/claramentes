@@ -17,6 +17,7 @@ const LessonList = () => {
         <div className = {courseCSS.lessonCard}>
             <div className = {courseCSS.lessonContent}>
                 <h1 className = {`${courseCSS.title} ${courseCSS.lightYellow}`}>{lesson.name}</h1>
+                <body className = {`${courseCSS.body} ${courseCSS.lightYellow}`}>{lesson.content}</body>
             </div>
             <div className = {courseCSS.lessonNav}>
                 <div className = {courseCSS.lessonsHeader}>

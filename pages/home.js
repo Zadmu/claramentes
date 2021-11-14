@@ -98,7 +98,7 @@ export default function Home({ email, name, userData, courses}) {
         <Header />
       </div>
       <div>
-        <TopicCarousel images={images} />
+        <TopicCarousel courses={courses} />
       </div>
       <div className = {homeStyles.recommendedWrapper}>
         <div className = {homeStyles.recommendedText}>Recommended Courses</div>
