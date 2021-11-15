@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import styles from "./TopicCarousel.module.css";
+import Link from 'next/link';
 
 /**This component is for the left and right chevron buttons.*/
 const SliderButton = ({ isLeft, onClick }) => {
@@ -40,30 +41,33 @@ const BottomProgressIndicator = ({ images, currentIndex, setIndex }) => {
   );
 };
 
-const DestinationsCarousel = ({ images }) => {
+const DestinationsCarousel = ({ courses }) => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   // Go to next and previous slides with loopbacks.
   const next = () =>
-    slideIndex == images.length - 1
+    slideIndex == courses.length - 1
       ? setSlideIndex(0)
       : setSlideIndex(slideIndex + 1);
 
   const prev = () =>
     slideIndex == 0
-      ? setSlideIndex(images.length - 1)
+      ? setSlideIndex(courses.length - 1)
       : setSlideIndex(slideIndex - 1);
 
-  const imagesList = images.map((image, i) => (
+  const imagesList = courses.map((course, i) => (
     <div key={i}>
-      
-      <h1 style = {{textAlign: "center", color: "#F4EED9", fontSize: "40px", marginTop: "70px"}}>{image.name}</h1>
-      <img src={image.imageUrl} style = {{height: "35%", width: "35%", marginTop: "3%", marginBottom: "8%"}}/>
+      <Link href="/course/[id]" as={`/course/${course._id}`} key={`${course._id}/listed`}>
+        <div>
+          <h1 style={{ textAlign: "center", color: "#F4EED9", fontSize: "40px", marginTop: "70px" }}>{course.name}</h1>
+          <img src={course.picture} style={{ width: "300px", marginTop: "3%", marginBottom: "8%" }} />
+        </div>
+      </Link>
     </div>
   ));
 
   return (
-    <div style={{ height: "40%", width: "50%", position: "relative", marginLeft: "23%", marginBottom: "5%"}}>
+    <div style={{ height: "40%", width: "50%", position: "relative", marginLeft: "23%", marginBottom: "5%" }}>
       <SliderButton isLeft={true} onClick={prev} />
       <SliderButton isLeft={false} onClick={next} />
 
@@ -75,10 +79,10 @@ const DestinationsCarousel = ({ images }) => {
         showIndicators={false}
         transitionTime={700}
       >
-          {imagesList}
+        {imagesList}
       </Carousel>
       <BottomProgressIndicator
-        images={images}
+        images={courses}
         currentIndex={slideIndex}
         setIndex={setSlideIndex}
       />

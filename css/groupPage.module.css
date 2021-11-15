@@ -189,10 +189,9 @@
 }
 
 .eventTitleBox{
-    margin: 0 auto;
     width: 426px;
     height: 50px;
-
+    margin: auto;
     /* Spring wood */
 
     background: #F4EED9;
@@ -219,7 +218,7 @@
 .eventDescription{
     width: 548px;
     text-align: center;
-
+    margin: auto;
     /* Body */
 
     font-style: normal;
@@ -233,8 +232,8 @@
 }
 
 .eventDateBox{
-    width: 262px;
     height: 41px;
+    width: auto;
     /* Twine */
     background: #C29C71;
     border-radius: 0px 20px 20px 20px;
@@ -244,8 +243,6 @@
 .eventDate{
     padding-top: 7px;
     margin-left: 10px;
-    width: 220px;
-    height: 29px;
 
     /* Body */
 

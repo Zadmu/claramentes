@@ -6,7 +6,7 @@ import CourseCard from './CourseCard';
 import courseCSS from '../../css/courseCard.module.css';
 import GroupCard from './GroupCard';
 
-    const TopicsNav = ({setTopicRow, topicsList, setSelectedTopics, selectedTopics, topicRow, currentSelectedTopic, setCurrentSelectedTopic}) => {
+    const TopicsNav = ({courses, setTopicRow, topicsList, setSelectedTopics, selectedTopics, topicRow, currentSelectedTopic, setCurrentSelectedTopic}) => {
         const groups1STEM = [
             {
                 name: "Chem Study Group",
@@ -113,7 +113,7 @@ import GroupCard from './GroupCard';
                             <div>
                                 <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
                             </div>
-                            <CourseCard />
+                            <CourseCard courses={courses}/>
                         </div>
                         <div>
                             <div style={{marginTop: "3.5%"}}>
@@ -143,7 +143,7 @@ import GroupCard from './GroupCard';
                             <div>
                                 <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
                             </div>
-                            <CourseCard/>
+                            <CourseCard courses={courses}/>
                         </div>
                         <div>
                             <div style={{marginTop: "3.5%"}}>
@@ -172,7 +172,7 @@ import GroupCard from './GroupCard';
                             <div style={{marginTop: "3.5%"}}>
                                 <h2 className = {courseCSS.popularCourses}>Popular Courses</h2>
                             </div>
-                            <CourseCard/>
+                            <CourseCard courses={courses}/>
                         </div>
                         <div>
                             <div style={{marginTop: "3.5%"}}>

@@ -44,9 +44,15 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 43px;
+    text-align: center;
+}
 
-    /* dark grey */
-
+.body {
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
     text-align: center;
 }
 

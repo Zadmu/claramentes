@@ -100,7 +100,7 @@ const ProfilePages = [
 const MainPages = [
   {path: "topics", title: "Explore Topics"},
   {path: "groups", title: "Explore Groups"},
-  {path: "videos", title: "Browse Videos"}
+  {path: "courses", title: "Explore Courses"}
 ]
 
 
