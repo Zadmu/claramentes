@@ -33,7 +33,7 @@
     height: 43px;
     display: block;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #F4EED9;
-    border: 2px solid #323855;
+    border: 1px solid #323855;
     box-sizing: border-box;
     margin-left: 38px;
     margin-bottom: 8px;
@@ -47,7 +47,7 @@
     height: 43px;
     display: block;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #F4EED9;
-    border: 2px solid #323855;
+    border: 1px solid #323855;
     box-sizing: border-box;
     margin-bottom: 8px;
     margin-left: 76px;
@@ -61,7 +61,7 @@
     height: 43px;
     display: block;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #F4EED9;
-    border: 2px solid #323855;
+    border: 1px solid #323855;
     box-sizing: border-box;
     margin-bottom: 8px;
     margin-left: 35px;
