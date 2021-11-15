@@ -4,7 +4,19 @@ import topicsCSS from '../css/topicsPage.module.css';
 import topics from'../data/topics';
 import TopicsNav from './components/topicsNav';
 
-export default function topicsPage () {
+import { MATH_COURSES } from '../utils/api-defs';
+
+export async function getServerSideProps() {
+  const res = await fetch(MATH_COURSES());
+  const courses = await res.json();
+  return {
+    props: {
+      courses
+    }
+  }
+};
+
+export default function topicsPage ({courses}) {
     const [selectedTopics, setSelectedTopics] = useState([topics[0], topics[5], topics[9]]);
     const [topicRow, setTopicRow] = useState(1);
     const [currentSelectedTopic, setCurrentSelectedTopic] = useState(0);
@@ -19,7 +31,7 @@ export default function topicsPage () {
                 <hr/>
             </div>
             <div>
-                <TopicsNav setTopicRow = {setTopicRow} topicsList  = {topics} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicRow = {topicRow} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
+                <TopicsNav courses={courses} setTopicRow = {setTopicRow} topicsList  = {topics} setSelectedTopics = {setSelectedTopics} selectedTopics = {selectedTopics} topicRow = {topicRow} currentSelectedTopic = {currentSelectedTopic} setCurrentSelectedTopic = {setCurrentSelectedTopic}/>
             </div>
         </div>
     );
