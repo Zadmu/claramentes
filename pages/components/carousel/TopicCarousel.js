@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import styles from "./TopicCarousel.module.css";
-import Link from 'next/link'
+import Link from 'next/link';
 
 /**This component is for the left and right chevron buttons.*/
 const SliderButton = ({ isLeft, onClick }) => {

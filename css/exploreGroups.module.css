@@ -1,0 +1,34 @@
+.page {
+    position: relative;
+    height: 2400px;
+    /* dark grey */
+
+    background: #242424;
+}
+
+.title {
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+}
+
+.body {
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.darkGrey{
+    color: #242424;
+}
+
+.lightYellow{
+    color: #F4EED9;
+    margin-top: 20px;
+}
