@@ -8,7 +8,9 @@ const Group = new Schema({
     events: Array,
     user_ids: Array,
     admins: Array,
-    picture: String
+    picture: String,
+    topics: Array,
+    leader: String
 })
 
 module.exports = mongoose.model('Group', Group);

@@ -6,94 +6,7 @@ import CourseCard from './CourseCard';
 import courseCSS from '../../css/courseCard.module.css';
 import GroupCard from './GroupCard';
 
-    const TopicsNav = ({courses, setTopicRow, topicsList, setSelectedTopics, selectedTopics, topicRow, currentSelectedTopic, setCurrentSelectedTopic}) => {
-        const groups1STEM = [
-            {
-                name: "Chem Study Group",
-                admins: "John Smith",
-                lessons: [],
-                description: "             HEY GUYS! This is the Chemistry 101 study group. Feel free to discuss concepts, times to meet, and more. You guys are also welcome to add to-do list items if I forget, like homework, assessments, and more. You can post videos in the discussion tab, and also include links in the to-do list cards. I’m John, a junior at Wildcats high school. My email is jsmith@gmail.com if you want to contact me. I have taken college prep chemistry and am now taking AP chem. I made this group for people like me who like to learn with other people, which is why this website is so helpful. If you would like to set up a study session feel free to, and I will definitely join. Have fun learning chem!",
-                comments: [],
-                picture: "https://jobs.newscientist.com/getasset/c40a5488-11be-43b0-843f-a2e6ef9f0612/"
-            },
-        
-            {
-                name: "Bio Study Group",
-                admins: "HOBO McARTHER",
-                lessons: [],
-                description: "",
-                comment: [],
-                picture: "https://res.cloudinary.com/grand-canyon-university/image/fetch/w_750,h_564,c_fill,g_faces/https://www.gcu.edu/sites/default/files/media/GettyImages-1193074238.jpg"
-            },
-        
-            {
-                name: "Fun with Science!",
-                admins: "Joanne Joanne",
-                lessons: [],
-                description: "",
-                comments: [],
-                picture: "https://miro.medium.com/max/1400/0*yRhQ28Nd53cTSCR6"
-            }
-        ]
-
-        const groups2Science = [
-            {
-                name: "Chem Study Group",
-                admins: "John Smith",
-                lessons: [],
-                description: "             HEY GUYS! This is the Chemistry 101 study group. Feel free to discuss concepts, times to meet, and more. You guys are also welcome to add to-do list items if I forget, like homework, assessments, and more. You can post videos in the discussion tab, and also include links in the to-do list cards. I’m John, a junior at Wildcats high school. My email is jsmith@gmail.com if you want to contact me. I have taken college prep chemistry and am now taking AP chem. I made this group for people like me who like to learn with other people, which is why this website is so helpful. If you would like to set up a study session feel free to, and I will definitely join. Have fun learning chem!",
-                comments: [],
-                picture: "https://jobs.newscientist.com/getasset/c40a5488-11be-43b0-843f-a2e6ef9f0612/"
-            },
-        
-            {
-                name: "Bio Study Group",
-                admins: "HOBO McARTHER",
-                lessons: [],
-                description: "",
-                comment: [],
-                picture: "https://res.cloudinary.com/grand-canyon-university/image/fetch/w_750,h_564,c_fill,g_faces/https://www.gcu.edu/sites/default/files/media/GettyImages-1193074238.jpg"
-            },
-        
-            {
-                name: "Fun with Science!",
-                admins: "Joanne Joanne",
-                lessons: [],
-                description: "",
-                comments: [],
-                picture: "https://miro.medium.com/max/1400/0*yRhQ28Nd53cTSCR6"
-            }
-        ]
-
-        const groups3Chemistry = [
-            {
-                name: "Chem Study Group",
-                admins: "John Smith",
-                lessons: [],
-                description: "             HEY GUYS! This is the Chemistry 101 study group. Feel free to discuss concepts, times to meet, and more. You guys are also welcome to add to-do list items if I forget, like homework, assessments, and more. You can post videos in the discussion tab, and also include links in the to-do list cards. I’m John, a junior at Wildcats high school. My email is jsmith@gmail.com if you want to contact me. I have taken college prep chemistry and am now taking AP chem. I made this group for people like me who like to learn with other people, which is why this website is so helpful. If you would like to set up a study session feel free to, and I will definitely join. Have fun learning chem!",
-                comments: [],
-                picture: "https://jobs.newscientist.com/getasset/c40a5488-11be-43b0-843f-a2e6ef9f0612/"
-            },
-        
-            {
-                name: "Bio Study Group",
-                admins: "HOBO McARTHER",
-                lessons: [],
-                description: "",
-                comment: [],
-                picture: "https://res.cloudinary.com/grand-canyon-university/image/fetch/w_750,h_564,c_fill,g_faces/https://www.gcu.edu/sites/default/files/media/GettyImages-1193074238.jpg"
-            },
-        
-            {
-                name: "Fun with Science!",
-                admins: "Joanne Joanne",
-                lessons: [],
-                description: "",
-                comments: [],
-                picture: "https://miro.medium.com/max/1400/0*yRhQ28Nd53cTSCR6"
-            }
-        ]
-
+    const TopicsNav = ({courses, groups, setTopicRow, topicsList, setSelectedTopics, selectedTopics, topicRow, currentSelectedTopic, setCurrentSelectedTopic}) => {
 
         if(topicRow == 3){
             return (
@@ -119,7 +32,7 @@ import GroupCard from './GroupCard';
                             <div style={{marginTop: "3.5%"}}>
                                 <h2 className = {courseCSS.popularCourses}>Popular Groups</h2>
                             </div>
-                            <GroupCard groups = {groups3Chemistry}/>
+                            <GroupCard groups = {groups}/>
                         </div> 
                     </div>
                 </div>
@@ -149,7 +62,7 @@ import GroupCard from './GroupCard';
                             <div style={{marginTop: "3.5%"}}>
                                 <h2 className = {courseCSS.popularCourses}>Popular Groups</h2>
                             </div>
-                            <GroupCard groups = {groups2Science}/>
+                            <GroupCard groups = {groups}/>
                         </div> 
                     </div>
                 </div>
@@ -178,7 +91,7 @@ import GroupCard from './GroupCard';
                             <div style={{marginTop: "3.5%"}}>
                                 <h2 className = {courseCSS.popularCourses}>Popular Groups</h2>
                             </div>
-                            <GroupCard groups = {groups1STEM}/>
+                            <GroupCard groups = {groups}/>
                         </div>          
                     </div>
                 </div>

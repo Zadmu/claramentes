@@ -35,7 +35,13 @@ export const GET_GROUP_COMMENTS = (ID) => `${ORIGIN}/api/v1/group/comments/${ID}
 export const GROUP_ADD_EVENT = (ID) => `${ORIGIN}/api/v1/group/add/event/${ID}`;
 export const GET_GROUP_EVENTS = (ID) => `${ORIGIN}/api/v1/group/events/${ID}`;
 
-//topics
+//get courses by topic
+export const TOPIC_COURSES = (topic) => `${ORIGIN}/api/v1/course/topics/${topic}`;
+
 export const MATH_COURSES = () => `${ORIGIN}/api/v1/course/topics/math`;
 export const STEM_COURSES = () => `${ORIGIN}/api/v1/course/topics/stem`;
-export const TOPIC_COURSES = (topic) => `${ORIGIN}/api/v1/course/topics/${topic}`;
+
+
+//get groups by topic
+export const STEM_GROUPS = () => `${ORIGIN}/api/v1/group/topics/stem`;
+
