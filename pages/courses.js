@@ -11,9 +11,9 @@ const Groups = () => {
                 <Header />
             </div>
             <h1 className = {`${groupCSS.title} ${groupCSS.lightYellow}`}>
-                Browse all courses!
+                Browse All Courses
             </h1>
-            <div style = {{paddingTop: "20px"}}>
+            <div className={groupCSS.coursesBacking}>
                 <CourseCard courses = {courses}/>
             </div>
         </div>

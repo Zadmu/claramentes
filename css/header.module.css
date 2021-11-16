@@ -1,5 +1,5 @@
 .headerBackground {
-    box-shadow: 0px 0px 15px 3px gray;
+    box-shadow: 0px 0px 10px 1px gray;
     background: #F4EED9;
     position: relative;
     height: 80px;
@@ -39,8 +39,8 @@
 
 .headerLogo {
     position: relative;
-    left: -2%;
     right: 41.39%;
+    left: 0%;
     top: 0%;
     bottom: 0%;
     height: 70px;
@@ -60,6 +60,7 @@
     justify-content: center;
     padding: 7px;
     margin-left: 65%;
+    padding-right: 70px;
 }
 
 .createGroup:hover {

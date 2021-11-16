@@ -30,7 +30,7 @@ const DropdownNav = ({pages, title}) => {
 
 	return(
 		<div>
-			<Button style = {{color: '#E2D696', fontSize: '15px', fontWeight: 'bold', fontFamily: 'Inter'}} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+			<Button style = {{color: '#F4EED9', fontSize: '22px'}} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
 				{title}
 			</Button>
 			<Menu

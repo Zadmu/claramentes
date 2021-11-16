@@ -10,12 +10,13 @@
     line-height: 43px;
     color: #F4EED9;
     text-align: center;
+    padding-top: 100px;
 }
 
 .box{
     margin-left: auto;
     margin-right: auto;
-    width: 507px;
+    width: 700px;
     height: 1100px;
 }
 
@@ -27,6 +28,7 @@
     
     color: #F4EED9;
     text-align: left;
+    padding-top: 30px;
 }
 
 .info{
@@ -37,4 +39,9 @@
     
     color: #F4EED9;
     text-align: right;
+}
+
+.sectionBacking{
+    background-color: #323855;
+    padding-bottom: 30px;
 }

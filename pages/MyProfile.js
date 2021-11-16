@@ -11,13 +11,13 @@ const MyProfile = () => {
             </div>
             <div style={{ margin: "auto", background: "#4B6576", width: "90%" }}>
                 <Link href="localhost:3000/group/groupid">
-                    <div style={{ margin: "auto" }}>
-                        <h1 className={profileCSS.title}>Profile</h1>
+                    <div className={profileCSS.sectionBacking}>
+                        <h1 className={profileCSS.title}>My Profile</h1>
                     </div>
                 </Link>
                 <div className={profileCSS.box}>
                     <h2 className={profileCSS.category}>Username:</h2>
-                    <h2 className={profileCSS.info}>someone</h2>
+                    <h2 className={profileCSS.info}>someone</h2> 
                     <br />
                     <h2 className={profileCSS.category}>Email: </h2>
                     <h2 className={profileCSS.info}>someone@gmail.com</h2>
