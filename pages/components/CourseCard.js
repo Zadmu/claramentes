@@ -50,8 +50,6 @@ const CourseCard = ({courses}) => {
         )
     })
 
-
-
     return (
         <div className={courseCSS.row}>
             {renderCourses}

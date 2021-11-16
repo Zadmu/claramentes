@@ -5,7 +5,18 @@ import groupCSS from '../../css/groupPage.module.css';
 import { useState } from 'react';
 import courses from '../../data/course(1).json';
 import LessonList from '../components/LessonList';
+import { GET_COURSE } from '../../utils/api-defs';
 
+export async function getServerSideProps(context) {
+    const { id } = context.query;
+    const res = await fetch(GET_COURSE(id));
+    const course = await res.json();
+    return {
+      props: {
+        course
+      }
+    }
+  };
 
 const CourseContent = ({ activeComponent, course }) => {
     if (activeComponent === "description") {
@@ -39,9 +50,8 @@ const CourseContent = ({ activeComponent, course }) => {
 }
 
 
-export default function CoursePage() {
+export default function CoursePage({course}) {
     const [activeComponent, setActiveComponent] = useState("description");
-    const course = courses[0];
 
     return (
         <div className={groupCSS.page}>
