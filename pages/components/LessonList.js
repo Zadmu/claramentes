@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import lessons from '../../data/lessons.json';
+//import lessons from '../../data/lessons.json';
 import courseCSS from '../../css/coursePage.module.css';
 
 
-const LessonList = () => {
+const LessonList = ({lessons}) => {
     const [lesson, setLesson] = useState(lessons[0]);
     const renderButtons = lessons.map((specificLesson, i) => {
         return(
@@ -17,7 +17,7 @@ const LessonList = () => {
         <div className = {courseCSS.lessonCard}>
             <div className = {courseCSS.lessonContent}>
                 <h1 className = {`${courseCSS.title} ${courseCSS.lightYellow}`}>{lesson.name}</h1>
-                <body className = {`${courseCSS.body} ${courseCSS.lightYellow}`}>{lesson.content}</body>
+                <h2 className = {`${courseCSS.body} ${courseCSS.lightYellow}`}>{lesson.content}</h2>
             </div>
             <div className = {courseCSS.lessonNav}>
                 <div className = {courseCSS.lessonsHeader}>

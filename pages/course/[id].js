@@ -6,19 +6,26 @@ import { useState } from 'react';
 import courses from '../../data/course(1).json';
 import LessonList from '../components/LessonList';
 import { GET_COURSE } from '../../utils/api-defs';
+import { GET_COURSE_LESSONS } from '../../utils/api-defs';
 
 export async function getServerSideProps(context) {
     const { id } = context.query;
     const res = await fetch(GET_COURSE(id));
     const course = await res.json();
+    const res1 = await fetch(GET_COURSE_LESSONS(id));
+    const lessons = await res1.json();
     return {
-      props: {
-        course
-      }
+        props: {
+            course,
+            lessons
+        }
     }
-  };
+};
 
-const CourseContent = ({ activeComponent, course }) => {
+
+const CourseContent = ({ activeComponent, course, lessons}) => {
+    console.log("lessons: ");
+    console.log(lessons);
     if (activeComponent === "description") {
         return (
             <div>
@@ -33,7 +40,7 @@ const CourseContent = ({ activeComponent, course }) => {
             <div>
                 <hr className={groupCSS.agendaLine} />
                 <div>
-                    <LessonList/>
+                    <LessonList lessons = {lessons}/>
                 </div>
             </div>
         );
@@ -42,7 +49,7 @@ const CourseContent = ({ activeComponent, course }) => {
             <div>
                 <hr className={groupCSS.discussionLine} />
                 <div>
-                    <Comments/>
+                    <Comments />
                 </div>
             </div>
         );
@@ -50,7 +57,7 @@ const CourseContent = ({ activeComponent, course }) => {
 }
 
 
-export default function CoursePage({course}) {
+export default function CoursePage({ course, lessons }) {
     const [activeComponent, setActiveComponent] = useState("description");
 
     return (
@@ -58,8 +65,8 @@ export default function CoursePage({course}) {
             <Header />
             <div className={groupCSS.pictureContainer}>
                 <img src={course.picture} className={groupCSS.picture} />
-                <div className = {groupCSS.nameBox}>
-                    <h1 className = {groupCSS.name}>{course.name}</h1>
+                <div className={groupCSS.nameBox}>
+                    <h1 className={groupCSS.name}>{course.name}</h1>
                 </div>
                 <hr />
             </div>
@@ -82,7 +89,7 @@ export default function CoursePage({course}) {
                     <h2 className={groupCSS.buttonName}>Discussion</h2>
                 </div>
             </div>
-            <CourseContent activeComponent={activeComponent} course={course} />
+            <CourseContent activeComponent={activeComponent} course={course} lessons = {lessons}/>
         </div>
     )
 }

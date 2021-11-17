@@ -17,8 +17,8 @@ export async function getServerSideProps() {
 
 const Groups = ({groups}) => {
     return (
-        <div className = {groupCSS.page}>
-            <div className = "Header">
+        <div className={groupCSS.page}>
+            <div className="Header">
                 <Header />
             </div>
             <h1 className = {`${groupCSS.title} ${groupCSS.lightYellow}`}>
