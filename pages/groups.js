@@ -25,7 +25,10 @@ const Groups = ({groups}) => {
                 Browse All Groups
             </h1>
             <div className={groupCSS.coursesBacking}>
-                <GroupCard groups = {groups}/>
+                <GroupCard groups = {groups.slice(0,3)}/>
+                <GroupCard groups = {groups.slice(3,6)}/>
+                <GroupCard groups = {groups.slice(6,9)}/>
+                <GroupCard groups = {groups.slice(9,12)}/>
             </div>
         </div>
     );
