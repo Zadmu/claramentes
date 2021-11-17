@@ -186,6 +186,19 @@ router.get('/lessons/:id', async (req, res) => {
     }
 });
 
+//All coourses
+router.get('/all/courses', async (req, res) => {
+
+    const courses = await Course.find();
+
+    if (courses.length == 0){
+        return res.status(404).send({message: 'No courses found'})
+    } else {
+        return res.status(201).send(courses);
+    }
+})
+
+
 //Course Topics Get Requests
 
 router.get('/topics/STEM', async (req, res) => {

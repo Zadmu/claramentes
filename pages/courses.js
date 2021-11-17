@@ -4,11 +4,23 @@ import groupCSS from '../css/exploreGroups.module.css';
 import CourseCard from './components/CourseCard';
 import courses from '../data/courses2.json';
 
-const Groups = () => {
+import { ALL_COURSES } from '../utils/api-defs';
+
+export async function getServerSideProps() {
+    const res = await fetch(ALL_COURSES());
+    const courses = await res.json();
+    return {
+      props: {
+        courses
+      }
+    }
+  };
+
+const Courses = ({courses}) => {
     return (
         <div className = {groupCSS.page}>
             <div className = "Header">
-                <Header />
+                <Header/>
             </div>
             <h1 className = {`${groupCSS.title} ${groupCSS.lightYellow}`}>
                 Browse All Courses
@@ -20,4 +32,4 @@ const Groups = () => {
     );
 }
 
-export default Groups;
+export default Courses;

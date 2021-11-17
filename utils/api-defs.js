@@ -37,11 +37,12 @@ export const GET_GROUP_EVENTS = (ID) => `${ORIGIN}/api/v1/group/events/${ID}`;
 
 //get courses by topic
 export const TOPIC_COURSES = (topic) => `${ORIGIN}/api/v1/course/topics/${topic}`;
+export const ALL_COURSES = () => `${ORIGIN}/api/v1/course/all/courses`;
 
 export const MATH_COURSES = () => `${ORIGIN}/api/v1/course/topics/math`;
 export const STEM_COURSES = () => `${ORIGIN}/api/v1/course/topics/stem`;
 
-
 //get groups by topic
 export const STEM_GROUPS = () => `${ORIGIN}/api/v1/group/topics/stem`;
+export const ALL_GROUPS = () => `${ORIGIN}/api/v1/group/all/groups`;
 
